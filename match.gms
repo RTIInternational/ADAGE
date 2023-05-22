@@ -1,0 +1,168 @@
+$title  ADAGE Model - Exogenous growth trend the model will match
+* Here are the items ADAGE intends to match or close
+*   Population from UN2017
+*   GDP from World Bank for 2010~2015 and IEO2017 for 2020~2050
+*   Energy price and energy consumption in IEO2017
+
+set   aeo           AEO and IEO sectors
+      / RES             "Residential"
+        COM             "Commercial"
+        IND             "Industrial"
+        TRN             "Transportation"
+        ELE             "Electricity"
+       /
+
+set mapaeo(aeo,i)   Mapping between AEO&IEO sectors and ADAGE sectors
+ /ELE.  Conv
+  IND. (Col ,    nuc ,
+        Cru ,    hyd ,
+        Gas ,    bio ,
+        Oil ,    wnd ,
+        Ceth,    Sybd,    Swge,   FrsE ,
+        Weth,    Rpbd,    Albd,   FrwE ,
+        Scet,    Plbd,    Msce,
+        Sbet,    Cobd,    ArsE,
+
+        Ddgs,    Omel,
+
+        Wht ,    Gron,    Osdn,   Srbt,
+        Corn,    Soyb,    Srcn,   Ocr ,
+        Liv ,    Frs ,
+        Mea ,    Vol ,    Ofd ,
+        Eim ,    Man           )
+   COM. Srv
+   TRN.(AirP,    RalF ,   RalP ,  Auto,
+        WtrT,    RodF ,   RodP ,  Otrn    )
+   RES.(HH ,     House        )
+      /;
+
+set     e0(i)         Energy in IEO&AEO    / Col,   Cru,    Ele,   Gas,  Oil  /
+        ee0(i)        Energy in IEO&AEO    / Col,   Gas,    Oil  /
+        advrnw(rnw)   Advanced electricity generation in IEO&AEO  /wnd, bio/;
+
+    e0(i)$bio(i) =yes;
+
+
+*CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+*                           Energy Price and Consumption and Energy Efficiency
+*CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+parameter
+      IEO2017_cons                Energy consumption by sector from IEO2017 during 2010~2050 (quad btu)
+      IEO2017_prod                Energy production from IEO2017 during 2010~2050 (quad btu)
+      IEO2017_EI                  Energy intensity relative to GDP (1 in 2010)
+
+      IEO2017_gen                 Electricity production by source from IEO2017 during 2010~2050 (quad btu)
+      IEO2017_GDP                 GDP Projection from IEO2017 during 2010~2050 ($billion)
+      IEO2017_pop                 Population projection from IEO2017 during 2010~2050 (quad btu)
+      IEO2017_co2                 GHG emission from fossil fuel combustion from IEO2017 during 2010~2050 (mmt CO2)
+      IEO2017_MER2PPP             Coefficient to convert from Mer to PPP
+
+      USA_rpric(*,aeo,ee,t)       Energy retail price by sector in USA from different sources ($2010 per mmbtu)
+      USA_wpric(*,ee,t)           Energy whole sale price in USA from different sources ($2010 per mmbtu)
+      USA_rpric_avg(*,ee,t)       Energy average retail price in USA from different sources ($2010 per mmbtu)
+
+      en_cons(*,r,aeo,ee,t)       Energy consumption by sector in USA from different sources (quad)
+      en_prod(*,r,ee,t)           Energy production in USA from different sources (quad btu)
+      ele_gen(*,r,*,t)            Electricity generation by source (quad btu)
+      en_EI(*,r,*,t)              Energy Intensity from ADAGE and IEO2017 during 2010~2050 (btu per $)
+      en_AEEI(*,r,*,type,t)       Energy Intensity trend from ADAGE and IEO2017 during 2010~2050 (1 in 2010)
+
+      IEO2017_constot(r,e,t)      Energy consumption by energy type from IEO2017 during 2010~2050 (quad btu)
+      en_constot(source,r,ee,t)   Energy consumption by sector in USA from different sources (quad)
+
+      IEO2017_convbtushr(r,*,t)   Conventional electricity generation share from IEO2017 during 2010~2050 in term to quad but (%)
+      IEO2017_convvalushr(r,*,t)  Conventional electricity generation share from IEO2017 during 2010~2050 in term to $value (%)
+;
+
+$gdxin .\data\data11_en_eia.gdx
+$load IEO2017_cons  IEO2017_prod  IEO2017_EI  IEO2017_gen IEO2017_GDP  IEO2017_pop  IEO2017_co2  IEO2017_MER2PPP
+$load USA_rpric     USA_wpric     USA_rpric_avg
+$load en_cons       en_prod       ele_gen     en_EI      en_AEEI
+;
+
+    IEO2017_constot(r,e,t)    = sum(aeo, IEO2017_cons(r,aeo,e,t));
+    en_constot(source,r,ee,t) = sum(aeo, en_cons(source,r,aeo,ee,t));
+
+    IEO2017_convbtushr(r,cgo,t)= ele_gen("IEO2017",r,cgo,t)/sum(ee0,ele_gen("IEO2017",r,ee0,t));
+    IEO2017_convvalushr(r,cgo,t)$sum(ee0,ele_gen("IEO2017",r,ee0,t)/btu_conv(r,ee0,"fuel","conv"))
+        = ele_gen("IEO2017",r,cgo,t)/btu_conv(r,cgo,"fuel","conv")
+         /sum(ee0,ele_gen("IEO2017",r,ee0,t)/btu_conv(r,ee0,"fuel","conv"));
+
+display   IEO2017_convbtushr, IEO2017_convvalushr;
+
+parameter
+      c_le0(r,t)      Coefficient to shift labor productivity
+      c1_ke0          Coefficient to shift new capital
+      c2_ke0          Coefficient to shift new capital
+      c_hke0          Coefficient to shift human capital
+      c_inve0         Coefficient to shift investment
+      c_cd0           Coefficient to shift consumption
+      c_aeei          Coefficient to shift AEEI
+      c_y0_trd        Coefficient to shift energy productivity
+      c_re0_trd       Coefficient to shift natural resource
+      c_rnwe0_trd     Coefficient to shift renewable natural resource
+      c_afvT0         Coefficient used to calibrate AFV's mpge
+      c_afv           Coefficient used to calibrate AFV's mpge   ;
+
+* All of the data is from runs in ADAGE_2018\ADAGE_2018_task4_documcodecleaning\ADAGE_8r_eafv_task4_v5_elegenfix_wld_task2_bioAFV_v4_vmt_afv_task5_step12_test_DA_afvff_nompgelimit\lst\DA_12_e25%ff4%
+* They are obtained during the process to calibrate GDP, energy price and consumption to exogenous assumption in IEO2018
+* If exogenous assumption for GDP, energy price and consumption are updated with new data source, the calibration process
+*  need to be redone and those coefficients should be updated
+$gdxin 'data\data12_match.gdx'
+$load c_le0   c1_ke0  c2_ke0  c_hke0 c_cd0  c_inve0  c_aeei  c_y0_trd c_re0_trd   c_rnwe0_trd  c_afvT0
+
+    c1_ke0(r,"va",i,t)$convrnw(i)        = c1_ke0(r,"va","oil",t);
+    c1_ke0(r,"va","CC_gas",t)            = c1_ke0(r,"va","oil",t);
+    c1_ke0(r,k,"Conv",t)                 = 0;
+
+    c2_ke0(r,"va",i,t)$convrnw(i)        = c2_ke0(r,"va","oil",t);
+    c2_ke0(r,"va","CC_gas",t)            = c2_ke0(r,"va","oil",t);
+    c2_ke0(r,k,"Conv",t)                 = 0;
+
+    c_afv(r,afv,v)       = 1;
+    c_rnwe0_trd(r,gentype,t)= 1;
+
+* Provide EIA data for ADAGE use in energy price and consumption improvement
+parameter
+     AEEI(r,*,t)                  New AEEI that is used in ADAGE to calibrate energy consumption (1 in 2010)
+     re0_trd                      Natural resource endowment growth trend
+     rnwe0_trd                    Renewable natural resource endowment growth trend
+     y0_trd                       Production cost trend for natural gas and coal
+     y0_trdt                      Production cost trend for natural gas and coal
+
+     cdt0(r,hh,i,t)               Household consumption over time;
+
+
+* Assign AEEI growth trend
+    AEEI(r,"PME",t)  = en_AEEI("IEO2017",r,"PME","Simulated",t)
+                      /en_AEEI("ADAGE",r,"PME","Simulated",t)
+                      *en_AEEI("ADAGE",r,"PME","Assumption",t)
+                      *c_AEEI(r,"PME",t);
+
+    AEEI(r,e,t)      =  AEEI(r,"PME",t)
+                      * en_AEEI("IEO2017",r,e,"Simulated",t)
+                      / en_AEEI("IEO2017",r,"PME","Simulated",t)
+                      * c_AEEI(r,e,t);
+
+* Assign energy resource endowment growth trend
+    re0_trd(r,e,t)$(en_prod("ADAGE",r,e,t)  and rd0_10(r,e,"new",t) )
+          =  en_prod("IEO2017",r,e,t)/en_prod("ADAGE",r,e,"2010")
+            *c_re0_trd(r,e,t)   ;
+
+
+    rnwe0_trd(r,gentype,t)$(IEO2017_gentech(r,gentype,"2010") and rnw0_10(r,gentype,"new",t) )
+         =  IEO2017_gentech(r,gentype,t)/IEO2017_gentech(r,gentype,"2010")
+          * c_rnwe0_trd(r,gentype,t) ;
+
+
+* Assume fossil fuel energy production productivity growth trend
+* 1.3 for coal is based on historical price ratio from AEO during 2015 and 2010
+    y0_trdt(r,"col",t)$(t.val>2010) =  1.3;
+    y0_trdt(r,"gas",t)$(t.val>2010) =  USA_wpric("EIASTAT","gas","2010")/USA_wpric("EIASTAT","gas","2015");
+    y0_trdt(r,"cru",t)$(t.val>2010) =  USA_wpric("EIASTAT","cru","2010")/USA_wpric("EIASTAT","cru","2015");
+
+    y0_trd(r,e,t)$(t.val>2010 and y0_trdt(r,e,t)) = y0_trdt(r,e,t)*c_y0_trd(r,e,t);
+
+    cdt0(r,"hh",i,t)$(ord(t)>1)     = c_cd0(r,i,t)*cd0_10_(r,"hh",i,"2010");
+
+display  USA_rpric_avg, AEEI, re0_trd, rnwe0_trd, y0_trd;

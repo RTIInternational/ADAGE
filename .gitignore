@@ -1,0 +1,21 @@
+
+#files ending with the following suffixes
+*.gdx
+*.lst
+*.dat
+*.~gm
+*.~tx
+*.lxi
+225*
+*.GEN 
+*.gpr 
+*.log
+*.op*
+
+
+# directories within the project
+lst/
+
+# The following is required for anyone using Intellij
+# ignore intellij IDE generated
+.idea
