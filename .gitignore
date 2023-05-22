@@ -1,7 +1,6 @@
 
 #files ending with the following suffixes
 *.lst
-*.dat
 *.~gm
 *.~tx
 *.lxi
