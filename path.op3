@@ -1,0 +1,3 @@
+prox_pert 0.05
+crash_perturb yes
+convergence_tolerance 1e-4

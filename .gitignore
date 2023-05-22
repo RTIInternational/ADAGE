@@ -1,13 +1,5 @@
 
 #files ending with the following suffixes
-*.lst
-*.~gm
-*.~tx
-225*
-*.GEN 
-*.gpr 
-*.log
-*.op*
 
 
 # directories within the project
@@ -15,4 +7,3 @@ lst/
 
 # The following is required for anyone using Intellij
 # ignore intellij IDE generated
-.idea

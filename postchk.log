@@ -1,0 +1,29 @@
+
+--- Job postchk.gms Start 12/06/22 14:06:35 30.3.0 rc5da09e WEX-WEI x86 64bit/MS Windows
+--- GAMS Parameters defined
+    Restart D:\Model\ADAGE\ADAGE2Github\ADAGE\lst\DA\doc\ref50.g0?
+    Input D:\Model\ADAGE\ADAGE2Github\ADAGE\postchk.gms
+    PageWidth 500
+    PageSize 0
+    PageContr 3
+    Action CE
+    ScrDir D:\Model\ADAGE\ADAGE2Github\ADAGE\225a\
+    SysDir C:\ProgramData\30.3\
+    WorkDir D:\Model\ADAGE\ADAGE2Github\ADAGE\
+    LogOption 3
+    DFormat 0
+    TFormat 0
+    License C:\GAMS\win64\gamslice_conop.txt
+    ErrorLog 99
+    IDE 1
+GAMS 30.3.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     G220901|0002CO-WIN
+          RTI International, Agricultural, Resource & Energy EconDC15002-S9
+          License Admin: Justin Baker, justinbaker@rti.org                 
+--- Starting continued compilation
+--- Workfile was generated under GAMS version WEX303-303
+--- postchk.gms(300) 51 Mb
+--- Starting execution: elapsed 0:00:00.155
+--- postchk.gms(51633) 52 Mb
+*** Status: Normal completion
+--- Job postchk.gms Stop 12/06/22 14:06:35 elapsed 0:00:00.260

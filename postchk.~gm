@@ -1,0 +1,866 @@
+$Title ADAGE Model - Post Check
+
+*$setglobal in  .\lst\da\t5_noafv_new
+$setglobal in  .\lst\da\t23aaa
+
+
+
+*execute_unload  '.\lst\DA\chk_eds.gdx',  eds,ed0_.l;
+option ed0_:3:3:1;
+display modelstats,pcru_trd_scn,prices,chk_afvtall,chk_macro,prices_fuel,chk_enbalt,pafvff.l;
+
+parameter chk_bod;
+chk_bod(r)= bopdeft0(r,"hh","2010")/gdp_(r,"2010");
+
+*display  gdp_sec,cd0_.l,lstax,gove0,chk_bod,f_cru, afv_yenT0,ed0_10_,cons_alls,cons,cons_all,id0,afv_costt0;
+*afv_elas,ped.l,rkx.l,pa.l,poev.l,py.l,kd0,mk,chk_afvt,chk_shr,ty,hkd0_.L,afv_hkd0,tk,tl,ti;
+
+parameter   chk_vmtk;
+
+   chk_vmtk(r,i,v,t,"VMT")$((oev(i) or afv(i)) and extant(v)) = tran_vmtv(r,i,v,t);
+   chk_vmtk(r,i,v,t,"K")$(autoi(i) and extant(v))  = sum(mapoev(i,j),xket(r,"ldv",j,t));
+   chk_vmtk(r,i,v,t,"K")$(autoafv(i) and extant(v))= xket(r,"ldv",i,t);
+   chk_vmtk(r,i,v,t,"K")$(hdvi(i) and extant(v))   = sum(mapoev(i,j),xket(r,"va",j,t));
+   chk_vmtk(r,i,v,t,"K")$(hdvafv(i) and extant(v)) = xket(r,"va",i,t);
+   chk_vmtk(r,i,v,t,"PK")$(autoi(i) and extant(v)) = prices_kt(r,"ldv",i,v,t);
+   chk_vmtk(r,i,v,t,"PK")$(hdvi(i) and extant(v))  = prices_kt(r,"va",i,v,t);
+   chk_vmtk(r,i,v,t,"VMT/K")$chk_vmtk(r,i,v,t,"K") = chk_vmtk(r,i,v,t,"VMT")/ chk_vmtk(r,i,v,t,"K") ;
+
+
+
+parameter chk_pfru,chk_pfru1,chk_pfru2,chk_pfru3;
+   chk_pfru(r,i,v,t,"vmt")$tran_vmtv(r,i,v,"2020")=  tran_vmtv(r,i,v,t)/tran_vmtv(r,i,v,"2020")-1;
+   chk_pfru(r,i,v,t,"valu")$tran_valuv(r,i,v,"2020")=  tran_valuv(r,i,v,t)/tran_valuv(r,i,v,"2020")-1;
+   chk_pfru(r,i,v,t,"vmt")$(tran_vmtv(r,i,v,"2020")=0 and tran_vmtv(r,i,v,"2025")) =  tran_vmtv(r,i,v,t)/tran_vmtv(r,i,v,"2025")-1;
+   chk_pfru(r,i,v,t,"valu")$(tran_valuv(r,i,v,"2020")=0 and tran_valuv(r,i,v,"2025"))=  tran_valuv(r,i,v,t)/tran_valuv(r,i,v,"2025")-1;
+
+   chk_pfru(r,i,v,t,"diff")=round((chk_pfru(r,i,v,t,"valu")-chk_pfru(r,i,v,t,"vmt")),6);
+
+   chk_pfru1(r,trnv,v,t,"sum") = sum(maptrn(trnv,i),tran_vmtv(r,i,v,t));
+   chk_pfru1(r,trnv,v,t,"re")  = tran_vmtv(r,trnv,v,t);
+
+   chk_pfru1(r,trnv,v,t,"diff") = chk_pfru1(r,trnv,v,t,"re") -chk_pfru1(r,trnv,v,t,"sum") ;
+   chk_pfru1(r,i,v,t,"price")$tran_vmtv(r,i,v,t) = tran_valuv(r,i,v,t)/tran_vmtv(r,i,v,t);
+
+   chk_pfru2(r,trnv,v,t,"sum") = sum(maptrn(trnv,i),tran_valuv(r,i,v,t));
+   chk_pfru2(r,trnv,v,t,"re")  = tran_valuv(r,trnv,v,t);
+   chk_pfru2(r,trnv,v,t,"diff") = chk_pfru2(r,trnv,v,t,"re") -chk_pfru2(r,trnv,v,t,"sum") ;
+
+
+
+
+option  chk_pfru:4:4:1,chk_pfru1:4:4:1,chk_pfru2:4:4:1;
+display chk_pfru,chk_pfru1,chk_pfru2,afv_costT0,afv_loadf0,tran_cost0,tran_loadf0;
+
+
+*option chk_vmtk:3:4:1,chk_afvtall:3:4:1,chk_afvtp:3:4:1,chk_afvtQ:3:4:1,chk_afvtall:3:5:1;
+*display oev_shr_btu,beta,oev_fuel.l,f_hdvbio,afv_kdt00,afv_kd0,afv_ffen0,xk0, afv_ld0,tran_ketbyage,btu_conv,prices_kt_pc;
+*display chk_vmtk,chk_afvtV,chk_afvtall,chk_afvtP,chk_afvtQ,chk_afvtall;
+
+*display beta,oev_fuel.l,f_hdvbio,afv_kdt00,afv_kd0,afv_ffen0,xket,nket, afv_ld0,tran_ketbyage,btu_conv,prices_kt_pc;
+
+*afv_elas,xk0,xket,tran_ketbyage;
+*display  f_afv,c_inve0,macro,afv_kc_coef,afvff0_.l,afvtrn.l,afv_ff0,output,y0_.l,afv_costT0,xket,xk0,nk0,afv_ffen0,afv_yenT0,USA_auto_mpge,afv_mpget0,afv_costT0,land_area;
+
+
+*display ed0,en_elas,enoe_elas,eva_elas,eds,pmt_mpge, OEV_VALUS0_.L,obmixv_shr,obmix_shr1,obmixv,oev_valu0_.l,ed0_.l,obmix,obmix_shr;
+*display auto_mpg, auto_mpg_trd,obmix_shr1,BTU_conv;
+*display pmt_mpge,xket,rkx.l,kd0_.l,y0_.l,ped.l,afv_ed0,afv_edt0,afv_edt00,afv_edtrdt00,afv_kdt0,afv_id0,afv_vmtT0,afv_ff0;
+*display prices_kt,prices_kt_pc,price;
+*display afv_costT0,"before",prices,prices_kt,pafvff.L;
+
+
+
+display chk_mpge;
+
+parameter chk_eds, c_cd0_auto;
+ c_cd0_auto(r,"auto",t)=c_cd0(r,"auto",t);
+
+option phi_:4:3:1;
+display vmt_growth,output_growth;
+* display afv_yent0,mkt,afv_yenT0,phi_,betat0,beta_;
+
+*display obmixv,obmixv_shr,Fvmt_RodP0;
+
+*execute_unload  '%in%\%run%_%t%.gdx',  chk_gdp,chk_pl,chk_pk,c_afvt0, c_cd0_auto, c_le0,c2_ke0,tran_mpgev,tran_mpge,tran_vmtv,tran_vmt,vmt_growth,output_growth;
+*execute_unload  '%in%\%t%.gdx',  chk_gdp,chk_pl,chk_pk,c_afvt0, c_cd0_auto, c_le0,c2_ke0,tran_mpgev,tran_mpge,tran_vmtv,tran_vmt,vmt_growth,output_growth;
+*execute_unload  '%in%\%t%_%run%.gdx',  chk_gdp,chk_pl,chk_pk,c_afvt0, c_cd0_auto, c_le0,c2_ke0,tran_mpgev,tran_mpge,tran_vmtv,tran_vmt,vmt_growth,output_growth;
+
+*display afv_ed0, afv_edtrdt0,afv_ldt0,afv_kdt0,ldv_elas;
+
+
+
+$ontext
+
+tran_mpge(r,OEV,t)$(tran_vmt(r,oev,t) and sum(e,tran_enbtu(r,e,oev,t)))
+     =  tran_vmt(r,oev,t)/sum(mapoev(oev,trn),Fvmt_RodP0(r,trn))
+      / sum(e,tran_enbtu(r,e,oev,t))*btu_gal("oil");
+
+tran_mpge(r,trn,t)$sum(maptrn(trn,j),tran_vmt(r,j,t))
+     =  sum(maptrn(trn,j),tran_mpge(r,j,t)*tran_vmt(r,j,t))
+       / sum(maptrn(trn,j),tran_vmt(r,j,t));
+
+parameter eds0;
+eds0(r,e,use,i,v,t)                 = ed0_.l(r,e,use,i,v);
+eds0(r,e,use,"lu",v,t)$luc(r)       = sum((lu,lu_,g),lnd_ed0_.L(r,e,use,g,lu,lu_,v));
+eds0(r,e,use,oev,v,t)               = sum(mapoev(oev,j)$(f_hdvbio(r,j)=0 and not auto(j)),eds(r,e,use,j,v,t));
+eds0(r,e,use,oev,v,t)$(not ob(e))   = sum(mapoev(oev,j),eds(r,e,use,j,v,t));
+eds0(r,e,use,i,v,t)$(ob(e) and sum(maptrn(j,i)$(f_hdvbio(r,j) or auto(j)),  ed0_.l(r,e,use,j,v)*obmixv_shr(r,use,i,j,v,t)))
+           = sum(maptrn(j,i)$(f_hdvbio(r,j) or auto(j)),  ed0_.l(r,e,use,j,v)*obmixv_shr(r,use,i,j,v,t));
+
+eds0(r,e,use,i,v,t)$trnv(i)         = sum(maptrn(i,j),eds0(r,e,use,j,v,t));
+display eds0,f_hdvbio;
+execute_unload  '.\lst\DA\chk_eds.gdx',  eds,eds0,ed0_.l;
+*$exit
+$offtext
+*execute_unload  '.\lst\DA\clay1.gdx', xket,nket,totcap,chk_gdp,chk_pk,tran_vmtv,tran_mpgev;
+
+*parameter c_le0;
+*c_le0(r,t)= c1_le0(r,t)*c2_le0(r,t);
+
+parameter c_afvt1;
+
+   c_afvt1(r,afv,"new")$tran_mpgev(r,afv,"new","2010") = c_afvt0(r,afv,"new")*tran_mpgev(r,afv,"new","2010")/afv_mpget0(r,afv,"2010");
+   c_afvt1(r,afv,"new")$(c_afvt1(r,afv,"new")=0 and tran_mpgev(r,afv,"new","2015")) = c_afvt0(r,afv,"new")*tran_mpgev(r,afv,"new","2015")/afv_mpget0(r,afv,"2015");
+   c_afvt1(r,afv,"new")$(c_afvt1(r,afv,"new")=0 and tran_mpgev(r,afv,"new","2020")) = c_afvt0(r,afv,"new")*tran_mpgev(r,afv,"new","2020")/afv_mpget0(r,afv,"2020");
+   c_afvt1(r,afv,"new")$(c_afvt1(r,afv,"new")=0 and tran_mpgev(r,afv,"new","2025")) = c_afvt0(r,afv,"new")*tran_mpgev(r,afv,"new","2025")/afv_mpget0(r,afv,"2025");
+   c_afvt1(r,afv,"new")$(c_afvt1(r,afv,"new")=0 and tran_mpgev(r,afv,"new","2030")) = c_afvt0(r,afv,"new")*tran_mpgev(r,afv,"new","2030")/afv_mpget0(r,afv,"2030");
+   c_afvt1(r,afv,"new")$(c_afvt1(r,afv,"new")=0 and tran_mpgev(r,afv,"new","2035")) = c_afvt0(r,afv,"new")*tran_mpgev(r,afv,"new","2035")/afv_mpget0(r,afv,"2035");
+   c_afvt1(r,afv,"new")$(c_afvt1(r,afv,"new")=0 and tran_mpgev(r,afv,"new","2040")) = c_afvt0(r,afv,"new")*tran_mpgev(r,afv,"new","2040")/afv_mpget0(r,afv,"2040");
+   c_afvt1(r,afv,"new")$(c_afvt1(r,afv,"new")=0 and tran_mpgev(r,afv,"new","2045")) = c_afvt0(r,afv,"new")*tran_mpgev(r,afv,"new","2045")/afv_mpget0(r,afv,"2045");
+   c_afvt1(r,afv,"new")$(c_afvt1(r,afv,"new")=0 and tran_mpgev(r,afv,"new","2050")) = c_afvt0(r,afv,"new")*tran_mpgev(r,afv,"new","2050")/afv_mpget0(r,afv,"2050");
+   c_afvt1(r,afv,"new")$(c_afvt1(r,afv,"new")=0) = 1;
+
+   c_afvt1(r,afv,"extant")$tran_mpgev(r,afv,"extant","2015") = c_afvt0(r,afv,"extant")*tran_mpgev(r,afv,"extant","2015")/tran_mpgev(r,afv,"new","2010");
+   c_afvt1(r,afv,"extant")$(c_afvt1(r,afv,"extant")=0 and tran_mpgev(r,afv,"extant","2020")) = c_afvt0(r,afv,"extant")*tran_mpgev(r,afv,"extant","2020")/tran_mpgev(r,afv,"new","2015");
+   c_afvt1(r,afv,"extant")$(c_afvt1(r,afv,"extant")=0 and tran_mpgev(r,afv,"extant","2025")) = c_afvt0(r,afv,"extant")*tran_mpgev(r,afv,"extant","2025")/tran_mpgev(r,afv,"new","2020");
+   c_afvt1(r,afv,"extant")$(c_afvt1(r,afv,"extant")=0 and tran_mpgev(r,afv,"extant","2030")) = c_afvt0(r,afv,"extant")*tran_mpgev(r,afv,"extant","2030")/tran_mpgev(r,afv,"new","2025");
+   c_afvt1(r,afv,"extant")$(c_afvt1(r,afv,"extant")=0 and tran_mpgev(r,afv,"extant","2035")) = c_afvt0(r,afv,"extant")*tran_mpgev(r,afv,"extant","2035")/tran_mpgev(r,afv,"new","2030");
+   c_afvt1(r,afv,"extant")$(c_afvt1(r,afv,"extant")=0 and tran_mpgev(r,afv,"extant","2040")) = c_afvt0(r,afv,"extant")*tran_mpgev(r,afv,"extant","2040")/tran_mpgev(r,afv,"new","2035");
+   c_afvt1(r,afv,"extant")$(c_afvt1(r,afv,"extant")=0 and tran_mpgev(r,afv,"extant","2045")) = c_afvt0(r,afv,"extant")*tran_mpgev(r,afv,"extant","2045")/tran_mpgev(r,afv,"new","2040");
+   c_afvt1(r,afv,"extant")$(c_afvt1(r,afv,"extant")=0 and tran_mpgev(r,afv,"extant","2050")) = c_afvt0(r,afv,"extant")*tran_mpgev(r,afv,"extant","2050")/tran_mpgev(r,afv,"new","2045");
+   c_afvt1(r,afv,"extant")$(c_afvt1(r,afv,"extant")=0) = 1;
+
+*   c_afvt0(r,afv,v)=  c_afvt1(r,afv,v);
+
+*display c_afvt0,c_afvt1;
+*execute_unload 'data\data12_match_12312019.gdx',    c_aeei, c_y0_trd, c_le0, c1_ke0, c2_ke0,  c_hke0, c_inve0, c_cd0, c_re0_trd,c_rnwe0_trd,  c_afvT0;
+*execute_unload 'data\data12_match_01132020.gdx',    c_aeei, c_y0_trd, c_le0, c1_ke0, c2_ke0,  c_hke0, c_inve0, c_cd0, c_re0_trd,c_rnwe0_trd,  c_afvT0;
+*execute_unload 'data\data12_match_03292020.gdx',    c_aeei, c_y0_trd, c_le0, c1_ke0, c2_ke0,  c_hke0, c_inve0, c_cd0, c_re0_trd,c_rnwe0_trd,  c_afvT0;
+*execute_unload 'data\data12_match_04072020.gdx',    c_aeei, c_y0_trd, c_le0, c1_ke0, c2_ke0,  c_hke0, c_inve0, c_cd0, c_re0_trd,c_rnwe0_trd,  c_afvT0;
+*execute_unload 'data\data12_match_04292020.gdx',    c_aeei, c_y0_trd, c_le0, c1_ke0, c2_ke0,  c_hke0, c_inve0, c_cd0, c_re0_trd,c_rnwe0_trd,  c_afvT0;
+*execute_unload 'data\data12_match_04292020_pafv_gdp_step7.gdx',    c_aeei, c_y0_trd, c_le0, c1_ke0, c2_ke0,  c_hke0, c_inve0, c_cd0, c_re0_trd,c_rnwe0_trd,  c_afvT0;
+
+*$offtext
+option chk_afvt:3:4:1,vmtbyage_his:4:1:1,vmtbyage:4:1:1;
+display chk_afvt;
+*display mkt,tk,kd0_.l,xk0_10_,nk0_10_,kd0,xk0,nk0,xket,nket,ket,totcap;
+*display vmtbyage_his,tran_ketbyage,vmtbyage,tran_vmtbyage,tran_vmtshrV, tran_valuv,c_afvT0,afv_edtrd0;
+display  pmt_mpge, tran_mpge0, old_mpget, new_mpget,afv_mpget0,output,tran_vmt0;
+
+
+
+
+$ontext
+parameter chk_vmt, chk_enbtu;
+chk_vmt(r,s,v,"cal")$trnv(s)
+  =  y.l(r,s,v)*tran_vmt0(r,s)*Fvmt_RodP0(r,s)
+   + sum(maptrn(s,afv)$f_afv(r,afv,v),afvtrn.l(r,afv,v)/afv_pricT0(r,afv,"new","2010")/afv_loadf0(r,afv))  ;
+
+chk_vmt(r,trnv,v,"res")=tran_vmtv(r,trnv,v,"2010") ;
+chk_vmt(r,trnv,v,"diff")=chk_vmt(r,trnv,v,"res")-chk_vmt(r,trnv,v,"cal");
+chk_enbtu(r,s,v,"cal")$trnv(s)
+  =
+(    sum(e$(not advbio(e)),ed0_.l(r,e,"fuel",s,v)*BTU_conv(r,e,"fuel",s))
+  + sum(e$(advbio(e)),ed0_.l(r,e,"fuel",s,v)*BTU_conv(r,e,"fuel",s)/advbiomkup(r,e))
+
+  + sum((e,maptrn(s,afv))$(f_afv(r,afv,v) and not advbio(e)),ed0_.l(r,e,"fuel",afv,v)*BTU_conv(r,e,"fuel",afv))
+  + sum((e,maptrn(s,afv))$(f_afv(r,afv,v) and advbio(e)),ed0_.l(r,e,"fuel",afv,v)*BTU_conv(r,e,"fuel",afv)/advbiomkup(r,e))
+ )
+* /btu_gal("oil")
+;
+
+
+chk_enbtu(r,s,v,"cal2")$trnv(s)
+=(  sum(e$(auto(s) and ed0(r,e,"fuel",s,v) and ob(e)), ed0_.L(r,e,"fuel",s,v)*BTU_conv(r,e,"fuel",s))
+      + sum(e$(auto(s) and ed0(r,e,"fuel",s,v) and not ob(e)),  ed0_.L(r,e,"fuel",s,v)*BTU_conv(r,e,"fuel",s))
+      + sum(e$(f_hdvbio(r,s) and ed0(r,e,"fuel","auto",v) and bioe(e) ), ed0_.L(r,e,"fuel",s,v)*BTU_conv(r,e,"fuel",s))
+      + sum(e$(f_hdvbio(r,s) and ed0(r,e,"fuel",s,v) ),                  ed0_.L(r,e,"fuel",s,v)*BTU_conv(r,e,"fuel",s))
+      + sum(e$((auto(s) or f_hdvbio(r,s)) and advswtch(r,e,v) and advbio(e)), ed0_.L(r,e,"fuel",s,v)*BTU_conv(r,e,"fuel",s)/advbiomkup(r,e))
+      + sum(e$((auto(s) or f_hdvbio(r,s)) and f_bio(r,"ceth") and cobd(e) ) , ed0_.L(r,e,"fuel",s,v)*BTU_conv(r,e,"fuel",s))
+
+      + sum((e,maptrn(s,afv))$(f_afv(r,afv,v) and not advbio(e)),ed0_.L(r,e,"fuel",afv,v)*BTU_conv(r,e,"fuel",afv))
+      + sum((e,maptrn(s,afv))$(f_afv(r,afv,v) and advbio(e)),ed0_.L(r,e,"fuel",afv,v)*BTU_conv(r,e,"fuel",afv)/advbiomkup(r,e))
+      );
+
+
+chk_enbtu(r,s,v,"res")$trnv(s)
+  =  sum(e,en_btusv(r,e,"fuel",s,v,"2010"))
+*/btu_gal("oil")
+  ;
+
+chk_enbtu(r,trnv,v,"diff")=chk_enbtu(r,trnv,v,"res")-chk_enbtu(r,trnv,v,"cal");
+
+display chk_vmt,chk_enbtu;
+
+parameter chk_mpg;
+chk_mpg(r,s,"out")$targt_mpge(r,s)=tran_vmt0(r,s)*(1/targt_mpge(r,s))/y0(r,s,"new");
+chk_mpg(r,s,"in")$targt_mpge(r,s)= sum(e,ed0(r,e,"fuel",s,"new")*mk(r,s,"ed0","new")*btu_conv(r,e,"fuel",s))/btu_gal("oil")/y0(r,s,"new");
+chk_mpg(r,s,e)$targt_mpge(r,s)   = ed0(r,e,"fuel",s,"new")*mk(r,s,"ed0","new")*btu_conv(r,e,"fuel",s)/btu_gal("oil")/y0(r,s,"new");
+
+chk_mpg(r,afv,"out")$(autoafv(afv) and targt_mpge(r,"auto"))
+   = (tran_vmt0(r,"auto")*(1/targt_mpge(r,"auto"))/y0(r,"auto","new")) ;
+
+chk_mpg(r,afv,"in")$(autoafv(afv) and targt_mpge(r,"auto"))
+    =(sum(e,afv_ed0(r,afv,e,"new")*afv_edtrd0(r,afv,"new")*btu_conv(r,e,"fuel","auto")/btu_gal("oil")));
+
+chk_mpg(r,afv,e)$(autoafv(afv) and targt_mpge(r,"auto"))
+    =afv_ed0(r,afv,e,"new")*afv_edtrd0(r,afv,"new")*btu_conv(r,e,"fuel","auto")/btu_gal("oil");
+
+
+chk_mpg(r,afv,"out")$(rodfafv(afv) and targt_mpge(r,"rodf"))
+    = (tran_vmt0(r,"rodf")*(1/targt_mpge(r,"rodf"))/y0(r,"rodf","new")) ;
+
+chk_mpg(r,afv,"in")$(rodfafv(afv) and targt_mpge(r,"rodf"))
+   = (sum(e,afv_ed0(r,afv,e,"new")*afv_edtrd0(r,afv,"new")*btu_conv(r,e,"fuel","rodf")/btu_gal("oil")))  ;
+
+chk_mpg(r,afv,e)$(rodfafv(afv) and targt_mpge(r,"rodf"))
+   = afv_ed0(r,afv,e,"new")*afv_edtrd0(r,afv,"new")*btu_conv(r,e,"fuel","rodf")/btu_gal("oil")  ;
+
+
+chk_mpg(r,afv,"out")$(rodpafv(afv) and targt_mpge(r,"rodp"))
+   =(tran_vmt0(r,"rodp")*(1/targt_mpge(r,"rodp"))/y0(r,"rodp","new"));
+
+chk_mpg(r,afv,"in")$(rodpafv(afv) and targt_mpge(r,"rodp"))
+   =(sum(e,afv_ed0(r,afv,e,"new")*afv_edtrd0(r,afv,"new")*btu_conv(r,e,"fuel","rodp")/btu_gal("oil")))   ;
+
+chk_mpg(r,afv,e)$(rodpafv(afv) and targt_mpge(r,"rodp"))
+   =afv_ed0(r,afv,e,"new")*afv_edtrd0(r,afv,"new")*btu_conv(r,e,"fuel","rodp")/btu_gal("oil")   ;
+
+$offtext
+
+
+
+display c2_ke0,c_cd0,c_cd0_auto,c_le0,gdp_;
+
+*$ontext
+display chk_gdp,chk_pl, chk_pk, chk_phk;
+
+
+
+
+
+parameter chk_enmix;
+   chk_enmix(i,e,v,t)$(tran_vmtv("USA",i,v,t) and autoi(i))=tran_enbtuv("USA",e,i,v,t)/tran_vmtv("USA",i,v,t);
+   chk_enmix(i,e,v,t)$(tran_vmtv("USA",i,v,t) and rodfi(i))=tran_enbtuv("USA",e,i,v,t)/tran_vmtv("USA",i,v,t);
+   chk_enmix(i,e,v,t)$(tran_vmtv("USA",i,v,t) and rodpi(i))=tran_enbtuv("USA",e,i,v,t)/tran_vmtv("USA",i,v,t);
+   chk_enmix(i,"total",v,t) =sum(e,chk_enmix(i,e,v,t));
+option chk_enmix:3:3:1;
+display  chk_enmix,enprod_btu;
+
+
+parameter chk_oev,chk_oev1,chk_mpge;
+
+  chk_oev(r,s,v,"y")$sameas(s,"auto") = oev_valu0(r,s,v);
+  chk_oev(r,s,v,e)$sameas(s,"auto")   = phi(r,e,v)*ed0(r,e,"fuel",s,v) ;
+  chk_oev(r,s,v,advbio)$(sameas(s,"auto") and advswtch(r,advbio,v) and new(v))= phi(r,advbio,v) ;
+  chk_oev(r,s,v,e)$(sameas(s,"auto") and chg_bio(r,"ceth",e,v)$(f_bio(r,"ceth") and cobd(e)) and new(v))= phi(r,e,v)*chg_bio(r,"ceth",e,v); ;
+  chk_oev(r,s,v,"ed0")$auto(s)   = sum(e,chk_oev(r,s,v,e)) ;
+
+  chk_oev(r,s,v,"y")$(hdv(s) )               = ed0(r,"oil","fuel",s,v)  ;
+  chk_oev(r,s,v,e)$(hdv(s) and oil(e))       = beta(r,s,e,v)*ed0(r,e,"fuel",s,v) ;
+  chk_oev(r,s,v,ethl)$(hdv(s) and f_hdvbio(r,s)  and new(v))  = beta(r,s,ethl,v)  ;
+  chk_oev(r,s,v,biod)$(hdv(s) and f_hdvbio(r,s)  and new(v))  = beta(r,s,biod,v)  ;
+  chk_oev(r,s,v,advbio)$(hdv(s) and f_hdvbio(r,s)  and advswtch(r,advbio,v) and new(v))       = beta(r,s,advbio,v);
+  chk_oev(r,s,v,"ed0")$(hdv(s) )             = sum(ob,chk_oev(r,s,v,ob)) ;
+
+
+  chk_oev1(r,s,v,"y1")$trnv(s) = sum(e$ob(e),ed0_10(r,e,"fuel",s,v,"2010"));
+  chk_oev1(r,s,v,"y2")$trnv(s) = sum(e$ob(e),ed0(r,e,"fuel",s,v));
+
+  chk_oev1(r,s,v,"y")$trnv(s)           = oev_valu0(r,s,v);
+  chk_oev1(r,s,v,e)$(trnv(s) and ob(e)) = mk(r,s,"ed0",v)*ed0(r,e,"fuel",s,v) ;
+  chk_oev1(r,s,v,"ed0")$trnv(s)         = sum(e$ob(e),mk(r,s,"ed0",v)*ed0(r,e,"fuel",s,v)) ;
+
+
+
+option   chk_oev:3:3:1,  chk_oev1:3:3:1;
+display  chk_oev,chk_oev1;
+*execute_unload '.\lst\DA_15_ff8%_t22\chk_enmix_ref.gdx',chk_enmix,chk_oev;
+*execute 'gdxxrw.exe .\lst\DA_15_ff8%_t22\chk_enmix_ref.gdx o=.\lst\DA_15_ff8%_t22\chk_enmix_ref.xlsx  par=chk_enmix          rng=chk_enmix!a2           cdim=0'
+
+
+parameter auto_enbtuT(r,t);
+  auto_enbtuT(r,t)=tran_enbtu(r,"oil","auto",t);
+
+display tran_valuv,tran_valu,tran_mpge0,tran_mpgev,tran_mpge,tran_vmtv,tran_vmt;
+
+
+display oev_gal,oev_btu,OEV_valu,en_btu,tran_enbtu,tran_enbtuV,auto_enbtuT;
+$exit
+
+$ontext
+parameter chk_envalu ;
+chk_envalu(r,e,use,i,t,"ed0")             =  ed(r,e,use,i,t);
+chk_envalu(r,e,use,"lu",t,"ed0")$(luc(r)) =  ed(r,e,use,"lu",t);
+chk_envalu(r,e,use,"all",t,"ed0")$(luc(r)) = sum(i$(not trnv(i)),chk_envalu(r,e,use,i,t,"ed0"))+ chk_envalu(r,e,use,"lu",t,"ed0") ;
+
+
+chk_envalu(r,e,use,i,t,"en_valus")      = en_valus(r,e,use,i,t);
+chk_envalu(r,e,use,"lu",t,"en_valus")   = en_valus(r,e,use,"lu",t);
+chk_envalu(r,e,use,"all",t,"en_valus")  = en_valus(r,e,use,"all",t);
+
+chk_envalu(r,e,"all",i,t,"en_valus")     = sum(use,en_valus(r,e,use,i,t));
+chk_envalu(r,e,"all","lu",t,"en_valus")  = sum(use,en_valus(r,e,use,"lu",t));
+chk_envalu(r,e,"all","all",t,"en_valus") = sum(use,en_valus(r,e,use,"all",t));
+
+chk_envalu(r,e,"all",i,t,"en_valu")     = en_valu(r,e,i,t);
+chk_envalu(r,e,"all","lu",t,"en_valu")  = en_valu(r,e,"lu",t);
+chk_envalu(r,e,"all","all",t,"en_valu") = en_valu(r,e,"all",t);
+
+chk_envalu(r,e,use,i,t,"en_btus")      = en_btus(r,e,use,i,t);
+chk_envalu(r,e,use,"lu",t,"en_btus")   = en_btus(r,e,use,"lu",t);
+chk_envalu(r,e,use,"all",t,"en_btus")  = en_btus(r,e,use,"all",t);
+
+chk_envalu(r,e,"all",i,t,"en_btus")     = sum((use),en_btus(r,e,use,i,t));
+chk_envalu(r,e,"all","lu",t,"en_btus")  = sum((use),en_btus(r,e,use,"lu",t));
+chk_envalu(r,e,"all","all",t,"en_btus") = sum((use),en_btus(r,e,use,"all",t));
+
+chk_envalu(r,e,"all",i,t,"en_btu")     = en_btu(r,e,i,t);
+chk_envalu(r,e,"all","lu",t,"en_btu")  = en_btu(r,e,"lu",t);
+chk_envalu(r,e,"all","all",t,"en_btu") = en_btu(r,e,"all",t);
+
+option  chk_envalu:3:5:1
+display chk_envalu ;
+$offtext
+
+*execute_unload 'output\compare_old.gdx',aeei, y0_trd, c1_le0,c2_le0,c1_ke0, c2_ke0,  c_hke0, c_inve0, c_cd0, re0_trd,rnwe0_trd;
+
+$ontext
+display "before", y0_trd,aeei;
+parameter chk_aeei, chk_y0_trd;
+c_y0_trd(r,e,t)$(t.val>2010 and y0_trdt(r,e,t)) = y0_trd(r,e,t)/y0_trdt(r,e,t);
+c_y0_trd(r,rnw,t)$(t.val>2010 and not sameas(r,"EUR") and not sameas(r,"XLM") and not sameas(r,"XAS"))
+    = y0_trd(r,rnw,t)/(1 + 0.010)**(5*(ord(t)-1));
+
+c_y0_trd(r,rnw,t)$(t.val>2010 and ( sameas(r,"EUR") or sameas(r,"XLM") or sameas(r,"XAS")) )
+    = y0_trd(r,rnw,t)/(1 + 0.020)**(5*(ord(t)-1));
+
+c_AEEI(r,"PME",t) =
+AEEI(r,"PME",t)  /( en_AEEI("IEO2017",r,"PME","Simulated",t)
+                      /en_AEEI("ADAGE",r,"PME","Simulated",t)
+                      *en_AEEI("ADAGE",r,"PME","Assumption",t))
+                      ;
+
+c_AEEI(r,e,t)$en_AEEI("IEO2017",r,e,"Simulated",t)
+= AEEI(r,e,t)      /( AEEI(r,"PME",t)
+                      * en_AEEI("IEO2017",r,e,"Simulated",t)
+                      / en_AEEI("IEO2017",r,"PME","Simulated",t))
+                      ;
+
+chk_y0_trd(r,e,t)$(t.val>2010 and y0_trdt(r,e,t)) =round(( y0_trdt(r,e,t)*c_y0_trd(r,e,t)
+                                                          - y0_trd(r,e,t)),4);
+chk_AEEI(r,"PME",t)  =round(( en_AEEI("IEO2017",r,"PME","Simulated",t)
+                      /en_AEEI("ADAGE",r,"PME","Simulated",t)
+                      *en_AEEI("ADAGE",r,"PME","Assumption",t)
+                      *c_AEEI(r,"PME",t)
+                      -AEEI(r,"PME",t)),4);
+
+chk_AEEI(r,e,t)      = round(( AEEI(r,"PME",t)
+                      * en_AEEI("IEO2017",r,e,"Simulated",t)
+                      / en_AEEI("IEO2017",r,"PME","Simulated",t)
+                      * c_AEEI(r,e,t)
+                      -AEEI(r,e,t)),4);
+display "after" ,chk_y0_trd, chk_aeei;
+
+parameter c_re0_trd(r,e,t),c_rnwe0_trd(r,rnw,t)
+          chk_re0_trd(r,e,t),chk_rnwe0_trd(r,rnw,t);
+
+    c_re0_trd(r,e,t)$en_prod("ADAGE",r,e,t) = re0_trd1(r,e,t) /( en_prod("IEO2017",r,e,t)/en_prod("ADAGE",r,e,"2010"));
+    c_rnwe0_trd(r,rnw,t)$ele_gen("ADAGE",r,rnw,"2010") = rnwe0_trd1(r,rnw,t)/(ele_gen("IEO2017",r,rnw,t)/ele_gen("ADAGE",r,rnw,"2010"));
+    chk_re0_trd(r,e,t)$en_prod("ADAGE",r,e,t)    = round((c_re0_trd(r,e,t)* ( en_prod("IEO2017",r,e,t)/en_prod("ADAGE",r,e,"2010"))-re0_trd(r,e,t)),3);
+    chk_rnwe0_trd(r,rnw,t)$ele_gen("ADAGE",r,rnw,"2010") = round((c_rnwe0_trd(r,rnw,t) *(ele_gen("IEO2017",r,rnw,t)/ele_gen("ADAGE",r,rnw,"2010"))-rnwe0_trd(r,rnw,t)),3);
+display chk_re0_trd,chk_rnwe0_trd;
+
+*parameter c_le0;
+*c_le0(r,t)= c1_le0(r,t)*c2_le0(r,t);
+
+*execute_unload 'data\coeff_task2_v8.gdx', c_aeei, c_y0_trd, c1_le0,c2_le0,c1_ke0, c2_ke0,  c_hke0, c_inve0, c_cd0   ;
+*execute_unload 'data\coeff_task5_v15.gdx', c_aeei, c_y0_trd, c1_le0,c2_le0,c1_ke0, c2_ke0,  c_hke0, c_inve0, c_cd0, c_re0_trd,c_rnwe0_trd;
+*execute_unload 'data\data12_match.gdx',    c_aeei, c_y0_trd, c_le0, c1_ke0, c2_ke0,  c_hke0, c_inve0, c_cd0, c_re0_trd,c_rnwe0_trd,  c_afvT;
+
+$offtext
+*display afv_ed0,afv_edt1,c_afv, c_afvT0,afv_t,f_afv,biod,btu_gal,gal_conv;
+*$exit
+
+*$offtext
+*display enprod_btu;
+*display AEEI,y0_trd,re0_trd, rnwe0_trd,c1_le0,c2_ke0,c_cd0,gdp_trend,biotarget_gal,chg_biot,f_bio,food;
+*$offtext
+*display btu0,ed0;
+parameter chk_bio  check biofuel production and consumption in various parameters;
+  chk_bio(r,e,"enprod_btu",t)$(bioe(e) or advbio(e)) = enprod_btu(r,e,t);
+  chk_bio(r,e,"enIM_btu",t)$(bioe(e) or advbio(e))   = entrd_btu(r,e,"import",t);
+  chk_bio(r,e,"enEX_btu",t)$(bioe(e) or advbio(e))   = entrd_btu(r,e,"export",t);
+  chk_bio(r,e,"en_btu",t)$(bioe(e) or advbio(e))     = en_btu(r,e,"all",t);
+  chk_bio(r,e,"OEV_btu",t)$(bioe(e) or advbio(e))    = sum(OEV,OEV_btu(r,e,OEV,t));
+  chk_bio(r,e,"tran_btu",t)$(bioe(e) or advbio(e))   = tran_enbtu(r,e,"Total",t);
+
+option chk_gal:4:2:1
+display chk_bio,chk_gal,chk_gal0,chk_enbalt;
+
+parameter chk_tar,chk_a_a0;
+chk_tar("auto",t)                  = tran_mpge("USA","auto",t)/AutoTrgt_mpge("auto",t);
+chk_tar("rodf",t)$HDVtrgt_mpge("rodf",t) = tran_mpgev("USA","rodf_OEV","new",t)/HDVtrgt_mpge("rodf",t);
+chk_tar("rodp",t)$HDVtrgt_mpge("rodp",t) = tran_mpgev("USA","rodp_OEV","new",t)/HDVtrgt_mpge("rodp",t);
+
+*chk_a_a0(bioe,t)$(sum(oev,oev_btu('usa',bioe,oev,t)) and biotarget_btu("sybd2b",bioe,t) and not cobd(bioe)
+*                   and  (    biotarget_btu("sybd2b",bioe,t)/sum(oev,oev_btu('usa',bioe,oev,t))>=1.0005
+*                         or  biotarget_btu("sybd2b",bioe,t)/sum(oev,oev_btu('usa',bioe,oev,t))<=0.9995
+*                        ) )
+*    =biotarget_btu("sybd2b",bioe,t)/sum(oev,oev_btu('usa',bioe,oev,t));
+
+*display  tran_mpge, tran_mpgeV,ag_tonn,land_area,oev_btu,oev_gal;
+display  chk_tar;
+*display  biotarget_btu,en_btu,enprod_btu,entrd_btu;
+
+
+*display "before", le0_10_,le0_10,labor_trend, leis0,c_le0,c1_ke0,c2_ke0,USA_wpric,AEEI,AEEI_new,y0_trd, en_cons ,cd0,corncoprod_yield0;
+
+*display biotarget_gal,oev_gal,gdp_,carbemis;
+
+
+
+
+display ele_btu,elesource;
+$ontext
+parameter    ADAGE_cons(r,aeo,i,t)    Energy consumption by sector from ADAGE during 2010~2050 (quad btu)
+             ADAGE_rpric(r,*,i,t)     Energy retail price by sector from ADAGE during 2010~2050 ($2010 per mmbtu)
+             ADAGE_rpric_avg(r,i,t)   Energy average retail price by sector from ADAGE during 2010~2050 ($2010 per mmbtu)
+             ADAGE_wpric(r,i,t)       Energy whole sale price from ADAGE during 2010~2050 ($2010 per mmbtu)
+             ADAGE_constot(r,*,t)     Total Energy consumption from ADAGE during 2010~2050 (quad btu)
+             ADAGE_prod(r,*,t)        Energy production from ADAGE during 2010~2050 (quad btu)
+             ADAGE_EI                 Energy Intensity with respect to GDP (btu per $)
+             ADAGE_AEEI               Energy efficiecy improvement(simulated and assumption) (1 in 2010)
+             ADAGE_elegen(r,*,t)      Electricity generation by source (quad btu);
+
+ ADAGE_cons(r,aeo,e0,t) = sum(mapaeo(aeo,i),en_btu(r,e0,i,t)) ;
+ ADAGE_prod(r,e0,t)     = enprod_btu(r,e0,t);
+ ADAGE_prod(r,"biof",t)  =  sum(bioe,enprod_btu(r,bioe,t))
+                          + sum(advb,enprod_btu(r,advb,t)) ;
+
+ ADAGE_rpric(r,aeo,e0,t)$sum((mapaeo(aeo,i),use),btu0(r,e0,use,i))
+     =   sum((mapaeo(aeo,i),use), ed0_10_(r,e0,use,i,"new",'2010'))
+       / sum((mapaeo(aeo,i),use), btu0(r,e0,use,i))
+                            * prices_pc(r,e0,"ped",t);
+*                           * prices(r,e0,"ped",t);
+
+
+ ADAGE_rpric(r,aeo,e0,t)$(sum((use),btu0(r,e0,use,"ele")) and sameas(aeo,"ele"))
+     =   sum((mapaeo(aeo,i),use), ed0_10_(r,e0,use,i,"new","2010"))
+       / sum(use, btu0(r,e0,use,"ele"))
+                           * prices_pc(r,e0,"ped",t);
+*                           * prices(r,e0,"ped",t);
+ ADAGE_rpric(r,"trn",trn,t)$(poev.l(r,trn)<>1)
+     = poev0(r,trn)*poev.l(r,trn);
+
+ ADAGE_rpric(r,afv,e,t)$(pa.l(r,e)<>1 and afv_ed0(r,afv,e,"new") and ceg(e))
+     = pa0(r,e)*pa.l(r,e);
+
+ ADAGE_rpric_avg(r,e0,t)$sum((i,use),btu0(r,e0,use,i))
+     =  sum((i,use), ed0(r,e0,use,i,"new"))
+      / sum((i,use),btu0(r,e0,use,i))
+      * prices_pc(r,e0,"ped",t);
+*     * prices(r,e0,"ped",t);
+
+
+
+ ADAGE_wpric(r,e0,t)$prod0(r,e0)
+     = y0_10_(r,e0,"new","2010")/ prod0(r,e0)
+     * prices_pc(r,e0,"py",t);
+*    * prices(r,e0,"py",t);
+
+ ADAGE_wpric(r,bio,t)$prod0(r,bio)
+     = y0_10_(r,bio,"new","2010")/ prod0(r,bio)
+     * prices_pc(r,bio,"py",t);
+
+
+ ADAGE_elegen(r,e,t)$sum(ee,en_btu(r,ee,"conv",t))
+        =  ele_btu(r,"conv",t)* eleheateff("2010",e)*en_btu(r,e,"conv",t)/sum(ee,eleheateff("2010",ee)*en_btu(r,ee,"conv",t));
+ ADAGE_elegen(r,rnw,t) =  ele_btu(r,rnw,t);
+ ADAGE_elegen(r,"total",t)=sum(rnw,ADAGE_elegen(r,rnw,t))+  ele_btu(r,"conv",t);
+
+ ADAGE_EI(r,e,t)    = 1000000*en_btu(r,e,"all",t)/gdp_(r,t);
+ ADAGE_EI(r,"PME",t) = 1000000*(  sum(e, en_btu(r,e,"all",t))
+                                + sum(rnw,ADAGE_elegen(r,rnw,t) )
+                                + sum(bio,enprod_btu(r,bio,t) )  )
+                      /gdp_(r,t);
+
+ ADAGE_AEEI(r,e,"Assumption",t)$efs_trend(r,e,t)    = 1/efs_trend(r,e,t);
+ ADAGE_AEEI(r,"PME","Assumption",t)$efs_trend(r,"oil",t) = 1/efs_trend(r,"oil",t);
+
+ ADAGE_AEEI(r,e,"Simulated", t)$ADAGE_EI(r,e,"2010")  = ADAGE_EI(r,e,t)/ ADAGE_EI(r,e,"2010");
+*PME: primary energy
+ ADAGE_AEEI(r,"PME","Simulated",t)=  ADAGE_EI(r,"PME",t)/ ADAGE_EI(r,"PME",t);
+
+parameter chk_enprod
+          chk_encons
+          chk_elegen
+          chk_enrpric
+          chk_enwpric
+         ;
+  chk_enprod(r,e,"ADAGE_NEW",t)       = enprod_btu(r,e,t);
+  chk_enprod(r,e,"IEO2017",t)         = IEO2017_prod(r,e,t);
+  chk_enprod("Total",e,"ADAGE_NEW",t) = sum(r,enprod_btu(r,e,t));
+  chk_enprod("Total",e,"IEO2017",t)   = sum(r,IEO2017_prod(r,e,t));
+
+  chk_encons(r,e,"ADAGE_NEW",t)       = en_btu(r,e,"All",t);
+  chk_encons(r,e,"IEO2017",t)         = IEO2017_constot(r,e,t);
+  chk_encons("Total",e,"ADAGE_NEW",t) = sum(r,en_btu(r,e,"All",t));
+  chk_encons("Total",e,"IEO2017",t)   = sum(r,IEO2017_constot(r,e,t));
+
+  chk_elegen(r,i,source,t)            = ele_gen(source,r,i,t);
+  chk_elegen(r,i,"ADAGE_NEW",t)       = elesource(r,i,t);
+  chk_elegen("Total",i,source,t)      = sum(r,ele_gen(source,r,i,t));
+  chk_elegen("Total",i,"ADAGE_NEW",t) = sum(r,elesource(r,i,t));
+
+
+  chk_elegen(r,"Total",source,t)        = ele_gen(source,r,"Total",t);
+  chk_elegen(r,"Total","ADAGE_NEW",t)   = elesource(r,"Total",t);
+  chk_elegen("Total","Total",source,t)        = sum(r,ele_gen(source,r,"Total",t));
+  chk_elegen("Total","Total","ADAGE_NEW",t)   = sum(r,elesource(r,"Total",t));
+
+
+  chk_enrpric(r,ee,source,t)$num(r)      = USA_rpric_avg(source,ee,t);
+  chk_enrpric(r,ee,"ADAGE_NEW",t)$num(r) = ADAGE_rpric_avg(r,ee,t);
+
+  chk_enwpric(r,ee,source,t)$num(r)      = USA_wpric(source,ee,t);
+  chk_enwpric(r,ee,"ADAGE_NEW",t)$num(r) = ADAGE_wpric(r,ee,t);
+  chk_enwpric(r,ee,"ADAGE",t) = 0;
+display chk_enprod, chk_encons,chk_elegen,chk_enwpric;
+display ADAGE_elegen, ADAGE_wpric,ADAGE_rpric,en_constot,chk_enrpric;
+
+*display ele_btu,elesource,en_btu,enprod_btu;
+*display tran_vmt,ldv_elas,hdv_elas,f_aggtrn,afv_elas,tran_enbtu;
+*display chk0_enprod, chk0_encons,chk0_elegen;
+
+*execute_unload  '.\output\ADAGE_chk.gdx',chk_enwpric,chk_encons, chk_gdp;
+*execute_unload 'output\ADAGE_chk.gdx',chk_enwpric,chk_encons, chk_gdp;
+*execute 'gdxxrw.exe output\ADAGE_chk.gdx o=output\ADAGE_chk.xlsx  par=chk_enwpric    rng=wpric!a3       cdim=0'
+*execute 'gdxxrw.exe output\ADAGE_chk.gdx o=output\ADAGE_chk.xlsx  par=chk_encons     rng=encons!a3      cdim=0'
+*execute 'gdxxrw.exe output\ADAGE_chk.gdx o=output\ADAGE_chk.xlsx  par=chk_gdp        rng=gdp!a3         cdim=0'
+
+
+
+parameter AEEI_new;
+AEEI_new(r,e,t)$(AEEI(r,e,t) and chk_encons(r,e,"ADAGE_NEW",t))=AEEI(r,e,t)*chk_encons(r,e,"IEO2017",t)/chk_encons(r,e,"ADAGE_NEW",t);
+AEEI_new(r,"PME",t)$AEEI(r,"PME",t)=AEEI(r,"PME",t)*sum(e,chk_encons(r,e,"IEO2017",t))/sum(e,chk_encons(r,e,"ADAGE_NEW",t));
+
+*display AEEI_new;
+*execute_unload  '.\data\ADAGE_AEEI_new.gdx',AEEI_new;
+$offtext
+
+set foodall(i)
+ / wht
+   corn
+   gron
+   soyb
+   osdn
+   srcn
+   srbt
+   ocr
+
+   LIV
+   FRS
+
+   MEA
+   VOL
+   OFD
+  /
+
+
+parameter foodexp;
+  foodexp(r,t)=sum(i$foodall(i),cd0_10(r,"hh",i,"2010")) /c0_10(r,"hh","2010");
+display foodexp;
+
+
+set crp1(crp)  /corn, soyb/;
+
+parameter chk_ffpric, chk_ffcons, chk_agpric,chk_enres;
+   chk_ffpric(r,ff,t)   = prices(r,ff,"py",t);
+   chk_ffpric(r,"ele",t)= prices(r,"ele","ped",t);
+   chk_ffcons(r,ff,t)   = en_btu(r,ff,"all",t);
+   chk_ffcons(r,"ele",t)= en_btu(r,"ele","all",t);
+
+   chk_agpric(crp1,r,t) = ag_pric(r,crp1,t);
+   chk_enres(r,ff,t)    = en_btu(r,ff,"house",t);
+
+display soybcoprod_yield0,corncoprod_yield0,prices_pc,chg_bio,vol_shr0, bio_shr0,chg_biot,USA_auto_enmix0,tran_mpge0,whlprc0 ;
+
+parameter price0_sybd  soybean biodiesiel price ;
+   price0_sybd(r,"py",t)$prod0_10(r,"sybd","2010")   =  y0_10(r,"sybd","new","2010")/prod0_10(r,"sybd","2010")
+                                                       *prices_pc(r,"sybd","py",t)*btu_gal("sybd");
+   price0_sybd(r,"pm",t)$em0_btu_10(r,"sybd","2010") = m0_10(r,"sybd","ftrd","2010")/em0_btu_10(r,"sybd","2010")*prices_pc(r,"sybd","pm",t)*btu_gal("sybd");
+   price0_sybd(r,"ped",t)$em0_btu_10(r,"sybd","2010")= price0(r,"sybd")*prices_pc(r,"sybd","ped",t)*btu_gal("sybd");
+
+
+display  price0_sybd;
+
+
+option chk_ffpric:5:2:1,chk_ffcons:5:2:1, ed0:2:4:1;
+display tran_loadf0 ,chk_ffpric, chk_ffcons, chk_agpric, chk_enres;
+*$exit
+$ontext
+execute_unload 'output\chkff_%scn%.gdx', chk_ffpric, chk_ffcons,chk_agpric,enprod_btu;
+execute 'gdxxrw.exe output\chkff_%scn%.gdx o=output\chkff.xlsx  par=chk_ffpric       rng=pric_%scn%!a3     cdim=1'
+execute 'gdxxrw.exe output\chkff_%scn%.gdx o=output\chkff.xlsx  par=chk_ffcons       rng=cons_%scn%!a3     cdim=1'
+execute 'gdxxrw.exe output\chkff_%scn%.gdx o=output\chkff.xlsx  par=chk_agpric       rng=agpric_%scn%!a3   cdim=1'
+execute 'gdxxrw.exe output\chkff_%scn%.gdx o=output\chkff.xlsx  par=enprod_btu       rng=enprod_%scn%!a3   cdim=1'
+
+$offtext
+
+set oilcrop(i)  /soyb, osdn/;
+
+option chk_lndem:3:4:1, en_btu:3:3:1,ag_pric:5:2:1
+*display chk_lndem, emis_rep;
+
+display ghgt,ghgtot,carbemis,carbemist;
+
+
+parameter   chk0_conveleP;
+
+   chk0_conveleP(r,conv,"y0")  = y0(r,conv,"new")*(1-ty(r,conv));
+   chk0_conveleP(r,conv,"id0") = sum(g,id0(r,g,conv,"new")*(1+ti(r,g,conv)));
+   chk0_conveleP(r,conv,"kd0") = sum(k,kd0(r,k,conv,"new")*(1+tk(r,k,conv)));
+*   chk0_conveleP(r,conv,"hkd0")= hkd0(r,conv,"new")*(1+thk(r,conv));
+   chk0_conveleP(r,conv,"ld0") = ld0(r,conv,"new")*(1+tl(r,conv));
+   chk0_conveleP(r,conv,e)     = sum((use),ed0(r,e,use,conv,"new"))  ;
+   chk0_conveleP(r,conv,"bal") = round((chk0_conveleP(r,conv,"y0")
+                                - chk0_conveleP(r,conv,"id0")
+                                - chk0_conveleP(r,conv,"kd0")
+*                                - chk0_conveleP(r,conv,"hkd0")
+                                - chk0_conveleP(r,conv,"ld0")
+                                - chk0_conveleP(r,conv,"ed0") ),7);
+
+display chk0_conveleP;
+
+parameter chk0_bioen;
+   chk0_bioen(r,bio,e,t)$enprod_btu(r,bio,t) = en_btu(r,e,bio,t)/enprod_btu(r,bio,t);
+   chk0_bioen(r,ad,e,t)$enprod_btu(r,ad,t)   = en_btu(r,e,ad,t)/enprod_btu(r,ad,t);
+display chk0_bioen;
+
+parameter chk0_envol;
+   chk0_envol(r,e,t) =  en_btu(r,e,"vol",t)/ag_tonn(r,"vol",t)*1000;
+display chk0_envol;
+
+execute_unload '.\lst\chk_ag_tonn.gdx', chk_ag_tonn;
+option ag_pric0:6:1:1;
+display ag_pric,efs_trend,chk0_shr,prices,price,ag_pric0,ag_pric_cons,ag_tonn_trad,cons_alls_tonn,chk_ag_tonn,prices_pc,ag_pric,ag_tonn_cons,ag_tonn,ag_tonn0;
+* assume soybean yield in terms to weight: oil (vol) : 19%, meal (omel): 80%; waste: 1%
+* The  osdn yield in terms to weight:     oil (vol) : 40%*0.97=38.8%, meal (omel): 60%; waste: 1.2%
+* https://www.cmegroup.com/trading/agricultural/files/pm374-cbot-soybeans-vs-dce-soybean-meal-and-soybean-oil.pdf
+
+parameter chk_prod,chk_pric, chk_yield;
+*fine
+   chk_prod(r,"vol",t)   = cons_alls_tonn(r,"soyb","vol",t)*0.19+ cons_alls_tonn(r,"osdn","vol",t)*0.388;
+   chk_prod(r,"vol_1",t) = ag_tonn(r,"vol",t);
+
+* not good
+   chk_prod(r,"omel",t)  = cons_alls_tonn(r,"soyb","vol",t)*0.80+ cons_alls_tonn(r,"osdn","vol",t)*0.60 + (cons_alls_tonn(r,"soyb","sybd",t)*0.80)$(t.val>2010) ;
+   chk_prod(r,"omel_1",t)= ag_tonn(r,"omel",t);
+*fine
+   chk_prod(r,"ceth",t)   = cons_alls_tonn(r,"corn","ceth",t)*corncoprod_yield0(t,"ceth")/1000;
+   chk_prod(r,"ceth_1",t) = sum(oev,oev_gal(r,"ceth",OEV,t));
+*fine
+   chk_prod(r,"ddgs",t)   = cons_alls_tonn(r,"corn","ceth",t)*corncoprod_yield0(t,"ddgs2");
+   chk_prod(r,"ddgs_1",t) = ag_tonn(r,"ddgs",t);
+*fine
+   chk_prod(r,"cobd",t)   = cons_alls_tonn(r,"corn","ceth",t)*corncoprod_yield0(t,"cobd2")/1000;
+   chk_prod(r,"cobd_1",t) = sum(oev,oev_gal(r,"cobd",OEV,t));
+
+   chk_pric(r,t,"vol" )$(t.val=2010) =ag_pric0(r,"vol")/(chk_prod(r,"vol",t)/ag_tonn(r,"vol",t));
+   chk_pric(r,t,"omel")$(t.val=2010) =ag_pric0(r,"omel")/(chk_prod(r,"omel","2015")/ag_tonn(r,"omel","2015"));
+   chk_pric(r,t,"corn")$(t.val=2010 and enprod_btu(r,"Ceth",t) and chk_prod(r,"ceth",t))
+              =ag_pric0(r,"corn")/(chk_prod(r,"ceth",t)/(enprod_btu(r,"Ceth",t)/btu_gal("ceth")));
+   chk_pric(r,t,"ddgs")$(t.val=2010 and chk_prod(r,"ddgs",t) and ag_tonn(r,"ddgs",t)) =ag_pric0(r,"ddgs")/(chk_prod(r,"ddgs",t)/ag_tonn(r,"ddgs",t));
+   chk_pric(r,t,"cobd")$(t.val=2010 and chk_prod(r,"cobd",t) and enprod_btu(r,"Cobd",t)) =ag_pric0(r,"cobd")/(chk_prod(r,"cobd",t)/(enprod_btu(r,"Cobd",t)/btu_gal("cobd")));
+
+   chk_yield(r,"sybd","Prod",t) =    enprod_btu(r,"sybd",t);
+   chk_yield(r,"Ceth","Prod",t) =    enprod_btu(r,"Ceth",t);
+   chk_yield(r,"Cobd","Prod",t) =    enprod_btu(r,"Cobd",t);
+   chk_yield(r,"Cobd","Cons",t) =    en_btu(r,"Cobd","all",t);
+
+   chk_yield(r,"sybd","Input_vol",t)  =   cons_alls_tonn(r,"vol","sybd",t);
+   chk_yield(r,"sybd","Input_soyb",t) =   cons_alls_tonn(r,"soyb","sybd",t);
+   chk_yield(r,"Ceth","Input_corn",t) =   cons_alls_tonn(r,"corn","ceth",t);
+
+
+   chk_yield(r,"vol", "yield",t)      =   ag_tonn(r,"vol",t)/(cons_alls_tonn(r,"soyb","vol",t)+cons_alls_tonn(r,"osdn","vol",t)) ;
+   chk_yield(r,"omel", "yield",t)     =   ag_tonn(r,"omel",t)/(cons_alls_tonn(r,"soyb","vol",t)+ cons_alls_tonn(r,"osdn","vol",t)+cons_alls_tonn(r,"soyb","sybd",t)) ;
+
+
+   chk_yield(r,"sybd","Yield",t)$( cons_alls_tonn(r,"vol","sybd",t)/0.19+ cons_alls_tonn(r,"soyb","sybd",t))
+                         =    enprod_btu(r,"sybd",t)/ btu_gal("sybd")
+                           /( cons_alls_tonn(r,"vol","sybd",t)/0.19+ cons_alls_tonn(r,"soyb","sybd",t))
+                           *1000 ;
+
+
+   chk_yield(r,"ceth","Yield",t)$cons_alls_tonn(r,"corn","ceth",t)
+                          =   1000*enprod_btu(r,"ceth",t)/btu_gal("ceth")
+                           / cons_alls_tonn(r,"corn","ceth",t) ;
+
+
+*   chk_yield(r,"ddgs","Yield",t) = ag_tonn(r,"ddgs",t)/auto_gal(r,"ceth",t);
+*   chk_yield(r,"cobd","Yield",t) = auto_gal(r,"cobd",t)/auto_gal(r,"ceth",t);
+
+   chk_yield(r,"ddgs","Yield",t)$cons_alls_tonn(r,"corn","ceth",t) = ag_tonn(r,"ddgs",t) /cons_alls_tonn(r,"corn","ceth",t);
+   chk_yield(r,"cobd","Yield",t)$enprod_btu(r,"ceth",t)
+          =  (enprod_btu(r,"cobd",t)/btu_gal("cobd"))
+            /(enprod_btu(r,"ceth",t)/btu_gal("ceth"));
+
+*   chk_yield(r,"cobd","Yield",t) = 1000*(enprod_btu(r,"cobd",t)/btu_gal("cobd"))
+*                                  /cons_alls_tonn(r,"corn","ceth",t);
+
+   chk_yield(r,"swge","Yield",t)$land_area(r,"swge",t) = 1000*auto_gal(r,"swge",t)/land_area(r,"swge",t);
+
+
+option chk_pric:5:2:1,chk_prod:5:2:1,chk_yield:4:3:1
+display chk_pric,chk_prod,swge_new,chk_yield,ag_yield0,corncoprod_yield0,soybcoprod_yield0,ag_pric_cons;
+
+
+
+*still has issue in yield of cobd and omel
+
+
+$ontext
+parameter     chk_cifuel;
+    chk_cifuel(e)$advbio(e)                      = CI0(e,"OEV")*btu_conv("usa","swge","fuel","auto")/1000;
+    chk_cifuel(e)$btu_conv("usa",e,"fuel","auto")= CI0(e,"OEV")*btu_conv("usa",e,"fuel","auto")/1000;
+display chk_cifuel,ag_yield0;
+
+
+option CI_target:6:0:1
+display CI_target,CI_policytrd,chk_ci0,chk_ci,CI_policy,trnrod_CIT,co2elet,co2t_ff,co2tot_ff;
+display trnrod_emT,trnrod_em,old_mpgeT,tran_prod,tran_valu;
+
+parameter trnrod_CIt_mode(*,t);
+
+        trnrod_CIT_mode(trnrod,t)$( hdv(trnrod) and sum(ee$bioCI(ee,"%transcn%"),trnrod_btu(trnrod,ee,t)) )
+         =  sum(e$bioCI(e,"%transcn%"),trnrod_btu(trnrod,e,t)*CI0(e,trnrod))
+         / sum(ee$bioCI(ee,"%transcn%"),trnrod_btu(trnrod,ee,t));
+
+        trnrod_CIT_mode("auto",t)$sum((ee,trnrod)$(not hdv(trnrod) and bioCI(ee,"%transcn%")),trnrod_btu(trnrod,ee,t))
+         =  sum((e,trnrod)$(not hdv(trnrod) and bioCI(e,"%transcn%")),trnrod_btu(trnrod,e,t)*CI0(e,trnrod))
+         / sum((ee,trnrod)$(not hdv(trnrod) and bioCI(ee,"%transcn%")),trnrod_btu(trnrod,ee,t));
+
+parameter chk_enrod, trnrod_btu;
+  chk_enrod(trnrod,e,"data","2010") = btu0("USA",e,"fuel",trnrod) ;
+  chk_enrod("OEV",e,"data","2010")  = btu0("USA",e,"fuel","auto")  ;
+  chk_enrod(trnrod,e,"simu",t)      = tran_enbtu("USA",e,trnrod,t);
+*  chk_enrod(trnrod,e,"PE",t)$(ord(t)<=%nt%)   = q_btuT("Tailpipe",trnrod,e,t);
+
+  trnrod_btu(trnrod,e,t) = tran_enbtu("USA",e,trnrod,t);
+
+
+option  chk_enrod:3:2:2
+display trnrod_btu,trnrod_CIT_mode,chk_pl,chk_pk;
+*execute_unload '.\output\CI\Adage_trnrod_ref.gdx', trnrod_btu;
+
+parameter a_CI0(*,t),b_ci0;
+   a_ci0("%transcn%",t) =trnrod_CIT(t)/CI_policy("%transcn%",t);
+   b_ci0("%transcn%",t) =trnrod_CIT(t);
+
+option a_CI0:5:1:1
+display a_CI0,b_ci0,afv_edtrdT0,output;
+$offtext
+
+
+
+
+parameter auto_btuall,as;
+  auto_btuall(r,e,t) = tran_enbtu(r,e,"auto",t);
+  auto_btuall(r,"total",t) =sum(e,auto_btuall(r,e,t));
+  as(r,advbio,t)$btu_conv(r,"swge","fuel","auto")=target_fuel(r,advbio,t) / btu_conv(r,"swge","fuel","auto");
+display  auto_btuall ;
+
+
+parameter yld_growth(r,*,t)      yield growth rate
+          agtonn_growth(r,*,t)  ;
+    yld_growth(r,crp,t)$ag_lndh(r,crp,t)         =  ag_tonn(r,crp,t)/ag_lndh(r,crp,t);
+    yld_growth(r,"liv",t)$land_area(r,"liv",t)   =  ag_tonn(r,"liv",t)/land_area(r,"liv",t);
+    yld_growth(r,advbio,t)$land_area(r,advbio,t)  = 1000*auto_gal(r,advbio,t)/land_area(r,advbio,t);
+
+    yld_growth(r,i,t)$yld_growth(r,i,"2010") =  yld_growth(r,i,t)/yld_growth(r,i,"2010");
+
+    agtonn_growth(r,i,t)$ag_tonn(r,i,"2010") =  ag_tonn(r,i,t)/ ag_tonn(r,i,"2010");
+
+ag_tonn_cons(r,i,t)$ag_pric0(r,i)       = chk_ag_tonn(r,i,"consumption",t);
+ag_pric_cons(r,i,t)$ag_tonn_cons(r,i,t) = cons_all(r,i,t)/ag_tonn_cons(r,i,t);
+
+cons_tonn(r,i,t)$ag_pric_cons(r,i,"2010")            = cons(r,i,t)/ag_pric_cons(r,i,"2010");
+cons_all_tonn(r,i,t)$ag_pric_cons(r,i,"2010")        = cons_all(r,i,t)/ag_pric_cons(r,i,"2010");
+cons_alls_tonn(r,i,j,t)$ag_pric_cons(r,i,"2010")     = cons_alls(r,i,j,t)/ag_pric_cons(r,i,"2010");
+
+cons_tonn("total",i,t)          = sum(r,cons_tonn(r,i,t));
+cons_all_tonn("total",i,t)      = sum(r,cons_all_tonn(r,i,t));
+cons_alls_tonn("total",i,j,t)   = sum(r,cons_alls_tonn(r,i,j,t));
+
+display lnd_trend,ag_pric,ag_tonn,land_area,yld_growth,agtonn_growth,chk_ag_tonn,cons_tonn,cons_all_tonn, cons_alls_tonn;
+
+parameter liv_yield,liv_area,liv_prod;
+    liv_yield(r,"liv",t)$land_area(r,"liv",t)         =  ag_tonn(r,"liv",t)/land_area(r,"liv",t);
+    liv_yield("total","liv",t)                        = sum(r, ag_tonn(r,"liv",t))/sum(r,land_area(r,"liv",t));
+
+    liv_area(r,"liv",t) = land_area(r,"liv",t);
+    liv_area("total","liv",t) = sum(r,land_area(r,"liv",t));
+    liv_prod(r,"liv",t)       = ag_tonn(r,"liv",t);
+    liv_prod("total","liv",t) = sum(r,ag_tonn(r,"liv",t));
+
+display liv_yield,liv_area, liv_prod,usa_auto_stockv;
+$exit
+
+parameter mpgev_new;
+  mpgev_new(r,trn,"old",t) = 0.9*tran_mpge(r,trn,t);
+
+  mpgev_new(r,trn,"new",t) = 1.2*tran_mpge(r,trn,t);
+
+  mpgev_new(r,afv,"new",t) = tran_mpgev(r,afv,"new",t);
+  mpgev_new(r,trn,"new",t)$(sameas(r,"usa") and hdv(trn))= tran_mpgeV(r,trn,"new",t);
+  mpgev_new(r,trn,"old",t)$(sameas(r,"usa") and hdv(trn))= tran_mpgeV(r,trn,"extant",t);
+  mpgev_new(r,trn,"new",t)$(sameas(r,"usa") and auto(trn))= tran_mpgeV(r,trn,"new",t);
+  mpgev_new(r,trn,"old",t)$(sameas(r,"usa") and auto(trn))= tran_mpgeV(r,trn,"extant",t);
+
+display mpgev_new;
+
+*execute_unload '.\lst\link\20160819\cdt0_45_3.gdx', cdt0;
+
+display   USA_auto_stockV;
+
+parameter ag_growth;
+ ag_growth(r,"agr",t) =sum(agrs,cons(r,agrs,t))/sum(agrs,cons(r,agrs,"2010"));
+ ag_growth(r,"food",t) =sum(food,cons(r,food,t))/sum(food,cons(r,food,"2010"));
+display ag_growth;
+
+
+$exit
+*$ontext
+execute_unload '%out%\%gdx%.gdx', tran_vmt,trnrod_btu,tran_mpge,tran_emis
+           tran_mpgeV, usa_auto_stockV,co2elet,CI_policy,trnrod_CIT;
+execute 'gdxxrw.exe %out%\%gdx%.gdx o=%out%\%file%.xlsx  par=tran_vmt          rng=vmt!%cell%           cdim=1'
+*execute 'gdxxrw.exe %out%\%gdx%.gdx o=%out%\%file%.xlsx  par=tran_enbtu        rng=enbtu!%cell%         cdim=1'
+execute 'gdxxrw.exe %out%\%gdx%.gdx o=%out%\%file%.xlsx  par=tran_emis         rng=emis!%cell%          cdim=1'
+execute 'gdxxrw.exe %out%\%gdx%.gdx o=%out%\%file%.xlsx  par=tran_mpge         rng=mpge!%cell%          cdim=1'
+*execute 'gdxxrw.exe %out%\%gdx%.gdx o=%out%\%file%.xlsx  par=tran_mpgeV        rng=mpgeV!%cell%         cdim=1'
+*execute 'gdxxrw.exe %out%\%gdx%.gdx o=%out%\%file%.xlsx  par=usa_auto_stockV   rng=usa_stock!%cell%     cdim=1'
+*execute 'gdxxrw.exe %out%\%gdx%.gdx o=%out%\%file%.xlsx  par=co2elet           rng=co2elet!%cell%       cdim=1'
+execute 'gdxxrw.exe %out%\%gdx%.gdx o=%out%\%file%.xlsx  par=trnrod_btu        rng=trnrod_btu!%cell%    cdim=1'
+execute 'gdxxrw.exe %out%\%gdx%.gdx o=%out%\%file%.xlsx  par=trnrod_CIT        rng=trnrod_CI!%cell%     cdim=1'
+execute 'gdxxrw.exe %out%\%gdx%.gdx o=%out%\%file%.xlsx  par=CI_policy         rng=CI_target!b4         cdim=1'
+*$offtext
+
+
+
+
+
+
+

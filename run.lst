@@ -1,0 +1,107 @@
+GAMS 26.1.0  rf2b37b9 Released Feb  2, 2019 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               04/11/23 17:39:12 Page 1
+ADAGE Model - Script to Run the model
+C o m p i l a t i o n
+
+
+   2  * Date: 4-6-2023
+   3   
+   4   
+   5  *CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+   6  *                         Version 1:  Oil Price Analysis
+   7  *CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+   8  *This is the run for the oil price paper:
+   9  *Scenarios conducted for:
+  10  *  Cai, Y., J. Woollacott, R.H. Beach, L. Rafelski, C. Ramig, and M. Shelby.
+  11  *         Insights from Adding Transportation Sector Detail into an Economy-Wide Model: The Case of the ADAGE CGE Model.
+  12  *   It is under review&revision at Energy Economics.
+  13  *
+  14  *1) Model version:
+  15  *     "Model version"          "name in the model"     Definition
+  16  *      YesAFV                        DA                Disaggregagetd transportation (eight modes) with AFV  for on-road
+  17  *       NoAFV                        DN                Disaggregagetd transportation (eight modes) without AFV  for on-road
+  18  *       Agg                          AN                Aggregated transportation (LDV and Other Trn) without AFV  for on-road
+  19  *   Model version is defined in setglobal DA, DN, AN in data.gms. Only one can be activated
+  20  *2) Oil price scenario:
+  21  *    "Oil Price scenario"      Definition
+  22  *        REF                    AEO2018 reference crude oil price
+  23  *        LOP                    AEO2018 low crude oil price
+  24  *        HOP                    AEO2018 high crude oil price
+  25  *    Oil price scenario is set through command  --scn=### (see below)
+  26  *
+  27  *a) DA: disaggregated with eight transportation sectors and 5 types of technologies in onroad transportation
+  28  **  Important:   data.gms:  make sure $setglobal DA is on
+  36   
+  37   
+  38  *b) DN: disaggregated with eight transportation sectors and only 1 type of conventional technology in onroad transportation
+  39  *  Important:   data.gms:  make sure $setglobal DN is on
+  47   
+  48  *c) AN: disaggregated with auto and otrn in transportation sectors and only 1 type of conventional technology in onroad transportation
+  49  *   Important:   data.gms:  make sure $setglobal AN is on
+  50   
+  58   
+  59  *d) merge scenarios and export to excel
+  60  *   Important: make sure the default file Adage_oilprice4tableau0.xlsx is located in .\output\all
+  61  *              make sure setglobal pcru is turned on and setglobal doc is off in merge.gms
+  62   
+  66   
+  67   
+  68  *CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+  69  *                         Version 2: Model documentation
+  70  *CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+  71  * Important:   data.gms:  make sure $setglobal DA is on and --scn=Ref is in the loop.gms command line
+  72   
+  77   
+  78  * make sure setglobal doc is activated on and setglobal pcru is off in merge
+  82   
+GAMS 26.1.0  rf2b37b9 Released Feb  2, 2019 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               04/11/23 17:39:12 Page 2
+ADAGE Model - Script to Run the model
+Include File Summary
+
+
+   SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
+
+     1        1 INPUT          0       0  C:\Develop\ADAGE\run.gms
+     2       30 CALL           1      30  mkdir  .\lst\DA   .\output\DA
+     3       31 CALL           1      31  gams data.gms    s=.\lst\DA\a1
+     4       32 CALL           1      32  gams model.gms   r=.\lst\DA\a1 s=.\lst\DA\a2
+     5       33 CALL           1      33  gams loop.gms    --scn=ref --nt=9  r=.\lst\DA\a2   s=.\lst\DA\ref50   gdx=.\output\DA\DA_REF
+     6       34 CALL           1      34  gams loop.gms    --scn=hop --nt=9  r=.\lst\DA\a2   s=.\lst\DA\hop50   gdx=.\output\DA\DA_HOP
+     7       35 CALL           1      35  gams loop.gms    --scn=lop --nt=9  r=.\lst\DA\a2   s=.\lst\DA\lop50   gdx=.\output\DA\DA_LOP
+     8       41 CALL           1      41  mkdir  .\lst\DN\   .\output\DN\
+     9       42 CALL           1      42  gams data.gms    s=.\lst\DN\a1
+    10       43 CALL           1      43  gams model.gms   r=.\lst\DN\a1  s=.\lst\DN\a2
+    11       44 CALL           1      44  gams loop.gms    --scn=ref --nt=9  r=.\lst\DN\a2   s=.\lst\DN\ref50   gdx=.\output\DN\DN_REF
+    12       45 CALL           1      45  gams loop.gms    --scn=hop --nt=9  r=.\lst\DN\a2   s=.\lst\DN\hop50   gdx=.\output\DN\DN_HOP
+    13       46 CALL           1      46  gams loop.gms    --scn=lop --nt=9  r=.\lst\DN\a2   s=.\lst\DN\lop50   gdx=.\output\DN\DN_LOP
+    14       52 CALL           1      52  mkdir  .\lst\AN\   .\output\AN\
+    15       53 CALL           1      53  gams data.gms    s=.\lst\AN\a1
+    16       54 CALL           1      54  gams model.gms   r=.\lst\AN\a1  s=.\lst\AN\a2
+    17       55 CALL           1      55  gams loop.gms    --scn=ref --nt=9  r=.\lst\AN\a2   s=.\lst\AN\ref50   gdx=.\output\AN\AN_REF
+    18       56 CALL           1      56  gams loop.gms    --scn=hop --nt=9  r=.\lst\AN\a2   s=.\lst\AN\hop50   gdx=.\output\AN\AN_HOP
+    19       57 CALL           1      57  gams loop.gms    --scn=lop --nt=9  r=.\lst\AN\a2   s=.\lst\AN\lop50   gdx=.\output\AN\AN_LOP
+    20       63 CALL           1      63  mkdir   .\lst\all     .\output\all
+    21       64 CALL           1      64  gams merge            s=.\lst\all\merge   pw=500
+    22       65 CALL           1      65  gams merge2xls_pcru   r=.\lst\all\merge  --vsn=all    pw=500
+    23       73 CALL           1      73  mkdir  .\lst\DA\Doc   .\output\DA\Doc
+    24       74 CALL           1      74  gams data.gms    s=.\lst\DA\Doc\a1
+    25       75 CALL           1      75  gams model.gms   r=.\lst\DA\Doc\a1 s=.\lst\DA\Doc\a2
+    26       76 CALL           1      76  gams loop.gms    --scn=ref --nt=9  r=.\lst\DA\Doc\a2   s=.\lst\DA\Doc\ref50   gdx=.\output\DA\Doc\Doc_REF
+    27       79 CALL           1      79  gams merge            s=.\lst\DA\Doc\merge   pw=500
+    28       80 CALL           1      80  gams merge2xls_pcru   r=.\lst\DA\Doc\merge  --vsn=DA\Doc    pw=500
+    29       81 CALL           1      81  gams report4docu      r=.\lst\DA\Doc\merge  --vsn=DA\Doc    pw=500
+
+
+COMPILATION TIME     =     2131.391 SECONDS      2 MB  26.1.0 rf2b37b9 WEX-WEI
+
+
+EXECUTION TIME       =        0.000 SECONDS      2 MB  26.1.0 rf2b37b9 WEX-WEI
+
+
+USER: Medium MUD - 10 User License                   G190624/0001CO-WIN
+      RTI International,                                     DC15002-S4
+
+
+**** FILE SUMMARY
+
+Input      C:\Develop\ADAGE\run.gms
+Output     C:\Develop\ADAGE\run.lst

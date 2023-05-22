@@ -1,0 +1,79 @@
+$ifthen setglobal pcru
+$setglobal base1     DA_New_REF
+$setglobal scn1_1    DA_New_HOP
+$setglobal scn1_2    DA_New_LOP
+
+$setglobal base2     DN_New_REF
+$setglobal scn2_1    DN_New_HOP
+$setglobal scn2_2    DN_New_LOP
+
+$setglobal base3     AN_New_REF
+$setglobal scn3_1    AN_New_HOP
+$setglobal scn3_2    AN_New_LOP
+
+
+$setglobal base4     DA_step2_REF
+$setglobal scn4_1    DA_step2_HOP
+$setglobal scn4_2    DA_step2_LOP
+
+$setglobal base5     DN_step2_REF
+$setglobal scn5_1    DN_step2_HOP
+$setglobal scn5_2    DN_step2_LOP
+
+$setglobal base6     AN_step2_REF
+$setglobal scn6_1    AN_step2_HOP
+$setglobal scn6_2    AN_step2_LOP
+
+$ontext
+$setglobal base7    DA_OLD_REF
+$setglobal scn7_1   DA_OLD_HOP
+$setglobal scn7_2   DA_OLD_LOP
+
+$setglobal base8    DN_OLD_REF
+$setglobal scn8_1   DN_OLD_HOP
+$setglobal scn8_2   DN_OLD_LOP
+
+$setglobal base9    AN_OLD_REF
+$setglobal scn9_1   AN_OLD_HOP
+$setglobal scn9_2   AN_OLD_LOP
+$offtext
+
+
+
+*$setglobal  vsn         All
+$setglobal  in1         '.\output\DA'
+$setglobal  in2         '.\output\DN'
+$setglobal  in3         '.\output\AN'
+$setglobal  in4         '.\output\DA\step2'
+$setglobal  in5         '.\output\DN\step2'
+$setglobal  in6         '.\output\AN\step2'
+*$setglobal  in7         '.\output\DA'
+*$setglobal  in8         '.\output\DN'
+*$setglobal  in9         '.\output\AN'
+
+$setglobal  out         '.\output\All'
+
+$call gdxmerge   %in1%\%base1%.gdx  %in1%\%scn1_1%.gdx  %in1%\%scn1_2%.gdx   %in2%\%base2%.gdx  %in2%\%scn2_1%.gdx  %in2%\%scn2_2%.gdx %in3%\%base3%.gdx  %in3%\%scn3_1%.gdx  %in3%\%scn3_2%.gdx  %in4%\%base4%.gdx  %in4%\%scn4_1%.gdx  %in4%\%scn4_2%.gdx   %in5%\%base5%.gdx  %in5%\%scn5_1%.gdx  %in5%\%scn5_2%.gdx   %in6%\%base6%.gdx  %in6%\%scn6_1%.gdx  %in6%\%scn6_2%.gdx
+* %in7%\%base7%.gdx  %in7%\%scn7_1%.gdx  %in7%\%scn7_2%.gdx   %in8%\%base8%.gdx  %in8%\%scn8_1%.gdx  %in8%\%scn8_2%.gdx   %in9%\%base9%.gdx  %in9%\%scn9_1%.gdx  %in9%\%scn9_2%.gdx
+* %in1%\%base10%.gdx  %in1%\%scn10_1%.gdx  %in1%\%scn10_2%.gdx  %in1%\%base11%.gdx  %in1%\%scn11_1%.gdx  %in1%\%scn11_2%.gdx %in1%\%base12%.gdx  %in1%\%scn12_1%.gdx  %in1%\%scn12_2%.gdx
+$endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

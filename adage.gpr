@@ -1,0 +1,5205 @@
+[PROJECT]
+
+[RP:RUN_LINK]
+1=
+
+[RP:ADAGE_MC_TRAN]
+1=
+
+[RP:RUN_CI]
+1=
+
+[GDXDISP: ed0 Par 6]
+PlaneDim=1
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=2,1,3,4,5,6
+Decim=7
+PlaneRownr=4
+PlaneFilter1=OIL
+
+[GDXDISP: ghg0 Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: em0_btu Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: emisfac_gcam Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: emrg0 Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: en0_btu Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ertl0 Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: etax0 Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ewhl0 Par 5]
+PlaneDim=1
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=2,1,3,4,5
+Decim=7
+PlaneRownr=1
+PlaneFilter1=CRU
+
+[GDXDISP: ex0_btu Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: fuel0 Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: g0 Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: vmt0 Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ty Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tx Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: trs0 Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tr Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tpt0 Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tons Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tn Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tm Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tl Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tk Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tinv Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ti Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: thk Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tg Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: te Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tc Par 2]
+PlaneDim=1
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tax0 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: rnw0 Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: rd0 Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: prod0 Par 3]
+PlaneDim=1
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=2
+PlaneFilter1=USA
+
+[GDXDISP: prd0 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: prc0 Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: pmx0 Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: pmt0 Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: plnd0 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: pld0 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: pkd0 Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: pid0 Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: phkd0 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: pcd0 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: n0 Par 4]
+PlaneDim=1
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=3,1,2,4
+Decim=7
+PlaneRownr=2
+PlaneFilter1=ELE
+
+[GDXDISP: m0 Par 4]
+PlaneDim=1
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=2,1,3,4
+Decim=7
+PlaneRownr=2
+PlaneFilter1=ELE
+
+[GDXDISP: lstax Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: lnd0 Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: le0 Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ld0 Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: land0 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ke0 Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: kd0 Par 5]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,5,4,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: a0 Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+PlaneFilter1=USA
+
+[GDXDISP: hectares Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ghg_lulc Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ghg_target Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ghgt Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: gov0 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: hkd0 Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: house0 Par 4]
+PlaneDim=1
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=4,1,2,3
+Decim=0
+PlaneRownr=-1
+
+[GDXDISP: i0 Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: id0 Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: inv0 Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: whlprc0 Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: x0 Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: y0 Par 4]
+PlaneDim=1
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=4,3,2,1
+Decim=7
+PlaneRownr=-1
+
+[RP:DATA_SAMPLE4EPA]
+1=
+
+[RP:EMPAX-CGE]
+1=
+
+[GDXDIFF]
+FILE1=D:\Model\ADAGE\ADAGE_2019\ADAGE_task5_step15_fes_v15_ffic_v7_new\data\data12_match_03242020.gdx
+FILE2=D:\Model\ADAGE\ADAGE_2019\ADAGE_task5_step15_fes_v15_ffic_v7_new\data\data12_match_03292020.gdx
+OUTFL=
+EPS=0.0
+RELEPS=0.0
+SETIGN=0
+FIELD=All fields
+FIELDONLY=0
+DIFFONLY=0
+
+[GDXDISP: auto_loadf0 Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[RP:ADAGE_DATA_SAMPLE4EPA]
+1=
+
+[GDXDISP: ed0_btu Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ed0_btu_trn Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: elegen Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: carbcnt_gcam Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: id0 Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: kd0 Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ld0 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: lnd0 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: m0 Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: n0 Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: n0_btu Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: prc0 Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: y0_gtap Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: y0 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[RP:INTEGRATION_27R]
+1=
+
+[GDXDISP: rd0 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[RP:GW_MERGE]
+1=  --disc=disc_03
+2= --disc=disc_03 
+3=
+
+[RP:UPDATE_EXTREND_AEOGDP_CHN_TRAN_TEST1]
+1=
+
+[RP:DATA_2010_NEW_V1_HDV]
+1=
+
+[GDXDISP: biotarget_btu Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[RP:MODEL_PMT_GHG_SHOCK_TRAN_LINK4_SHOCK_HDVAFVBIO_V2]
+1=
+
+[RP:LOOP_LINK_V4_CI_HDV]
+1=
+
+[RP:FINDINGS_2017]
+1=
+
+[RP:ADAGE_MC_TRAN_CI]
+1=
+
+[RP:LOOP_LINK_SHOCK2]
+1= --shockscn=Ceth5B  --time=25 --nt=9  pw=200  r=.\lst\shock2\C45 
+2=  --time=25 --nt=9  pw=200  r=.\lst\shock2\C45 
+3= --shockscn=REF      --time=25 --nt=9 --leus=0.82 --rus=2.0 --cus=0.75 --vus=1.05 pw=200  r=.\lst\shock2\R45_5 
+4=   --time=25 --nt=9 --leus=0.82 --rus=2.0 --cus=0.75 --vus=1.05 pw=200  r=.\lst\shock2\R45_5 
+5=--shockscn=REF         --time=25 --nt=9   pw=200  r=.\lst\shock2\R45_5  
+6=
+
+[RP:MODEL_PMT_GHG_SHOCK_TRAN_LINK4_SHOCK_NEWBIODATA_SWGE]
+1=
+
+[RP:BTU_HDV]
+1=
+
+[RP:BTU_DATA]
+1=
+
+[RP:RUN_SHOCK]
+1=
+
+[GDXDISP: btu0 Par 5]
+PlaneDim=2
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=5,1,2,3,4
+Decim=3
+PlaneRownr=2
+PlaneFilter1=2010
+PlaneFilter2=USA
+
+[GDXDISP: c0 Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ghgt0 Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: auto_enpricT0 Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: auto_loadf0 Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: auto_loadfT0 Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: auto_mpgeT0 Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: auto_pricT0 Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_loadf0 Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_mpge0 Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_pricT0 Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_pvmtT0 Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_vmt0 Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=3
+PlaneRownr=-1
+
+[GDXDISP: USA_auto_enmix0 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: USA_auto_price0 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: USA_auto_stock0 Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: cd0 Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+PlaneFilter1=USA
+
+[GDXDISP: co20 Par 5]
+PlaneDim=1
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=4,1,2,3,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: auto_vmtT0 Par 3]
+PlaneDim=1
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=2,1,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: land_trans_forside_details Par 8]
+PlaneDim=0
+RowDim=8
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6,7,8
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: LANDCON_CARB_output Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: FOR_Carb_flux Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: FOR_Carb_fluxcat Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=1
+PlaneRownr=-1
+
+[GDXDISP: FOR_Carb_fluxprivcat Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: FilesCompared Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_cost0 Par 4]
+PlaneDim=1
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=2,1,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: hdvafv_costT Par 4]
+PlaneDim=1
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=2,1,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_cost0 Par 3]
+PlaneDim=1
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=2,1,3
+Decim=3
+PlaneRownr=2
+PlaneFilter1=Auto
+
+[RP:AGGR_DATA_TRN]
+1=
+
+[GDXDISP: d0 Par 3]
+PlaneDim=1
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=2,1,3
+Decim=7
+PlaneRownr=1
+PlaneFilter1=ELE
+
+[GDXDISP: co2t0 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[RP:AAEA2014_SCNSETUP]
+1=
+
+[RP:CRUPRICE_SCNSETUP]
+1=
+
+[RP:MODEL_BACK]
+1=
+
+[RP:INTEGRATION_27R_TRAN]
+1=
+
+[RP:DATA_LUCSUPLY]
+1=
+
+[RP:ADAGE_OLD]
+1=
+
+[RP:READ_CO2_WORLD]
+1=
+
+[GDXDISP: btu_conv Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: bio_yldtrd Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: bio_yield0 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: bio_convert_trd Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: bio_convert Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: pop Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: price0 Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: swge_new Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: afv_a1 Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: f_cdt Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: BIOFS_GPROD Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=2
+PlaneRownr=-1
+
+[GDXDISP: BIOFS_COMM Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: BIOFS_DOMS Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=6
+PlaneRownr=-1
+
+[GDXDISP: BIOFS_EXP Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=2
+PlaneRownr=-1
+
+[GDXDISP: GlobalSet Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: REG Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: YEAR Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: SRC Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: BIOFS_IMP Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: advbiomkupt Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: hke_a Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: BIOFS_ROW Par 6]
+PlaneDim=0
+RowDim=6
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[RP:RUN_AGLAMP2017]
+1=
+
+[GDXDISP: gdp_aeo2014growth Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: gdp_aeo2014r Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: gdp_aeo2014trd Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[RP:GDP_AEO]
+1=pw=200
+2=
+
+[RP:READ_IEO_TRAN]
+1=
+
+[RP:READ_IEA_TRAN]
+1=
+
+[GDXDISP: AEO2018_cons Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: AEO2018_prod Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=3
+PlaneRownr=-1
+
+[RP:SCNSETUP]
+1=
+
+[GDXDISP: ap Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+Order=1
+Decim=7
+PlaneRownr=-1
+SqTrail0=0
+
+[GDXDISP: ap0 Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+SqTrail0=0
+
+[GDXDISP: A Var 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+SqTrail0=0
+
+[GDXDISP: apt Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[RP:UPDATE_ENTREND_EAFV]
+1=
+
+[RP:GW_MODEL_NEW]
+1=
+
+[GDXDISP: apt Par 5]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: Stat_rpric Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: AEO2018_wpric Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: AEEI_GDP Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: en_cons Par 5]
+PlaneDim=1
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=2
+PlaneRownr=-1
+PlaneFilter1=ADAGE
+
+[GDXDISP: en_prod Par 4]
+PlaneDim=1
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=2,3,1,4
+Decim=1
+PlaneRownr=-1
+
+[GDXDISP: en_AEEI Par 5]
+PlaneDim=1
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=2,3,1,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: USA_cons Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: USA_prod Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: USA_rpric Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=0
+PlaneRownr=-1
+
+[GDXDISP: USA_rpric_avg Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=1
+PlaneRownr=-1
+
+[GDXDISP: USA_wpric Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=2,1,3
+Decim=1
+PlaneRownr=-1
+
+[GDXDISP: stat_elegen Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=2
+PlaneRownr=-1
+
+[GDXDISP: gen Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=2
+PlaneRownr=-1
+
+[RP:CALIBRATION_EIA]
+1=
+
+[GDXDISP: IEO2017_AEEI Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: IEO2017_AEEI_coef Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: IEO2017_prod Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: IEO2017_gen Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: cons Par 4]
+PlaneDim=1
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=2,1,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: cap Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: prods Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[RP:SCRIPT_PAL_MIT2017]
+1=
+
+[RP:GTAP2018_SCNSETUP]
+1=
+
+[GDXDISP: leo_a Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[RP:UPDATE_EXTREND_AEOGDP_CHN_TRAN]
+1=
+
+[GDXDISP: newcap_a Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: c_cd0 Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: c_hke0 Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: c_inve0 Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: c_le0 Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: c1_ke0 Par 4]
+PlaneDim=1
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=6
+PlaneRownr=1
+PlaneFilter1=BRA
+
+[GDXDISP: c2_ke0 Par 4]
+PlaneDim=2
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=2,3,1,4
+Decim=7
+PlaneRownr=40
+PlaneFilter1=ldv
+PlaneFilter2=Auto
+
+[GDXDISP: newcap_b Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: c_cd0 Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[RP:C_GDP]
+1=
+
+[RP:HDV_EPA]
+1=
+
+[GDXDISP: c_gdp Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+Order=1,2
+Decim=3
+PlaneRownr=-1
+
+[RP:READ_TRAN_GCAM]
+1=
+
+[RP:READ_TRN_USA]
+1=
+
+[GDXDISP: AEEI_new Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=2
+PlaneRownr=-1
+
+[GDXDISP: chk_plnd Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_pl Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_pk Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=2
+PlaneRownr=-1
+
+[GDXDISP: chk_phk Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_ped Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_pc Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_mpget Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_mpge Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_macro Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_lucghg Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_lndem Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_ghg2 Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_GDPtrd Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_gdp Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_gal0 Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_gal Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_feed Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_enbalt Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_elas Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_ddgstrd Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_ddgs Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_carbcnt Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_c Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_bioprods Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_bioprod Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_autoOil Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_area Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_ag_tonn Par 4]
+PlaneDim=1
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=2,1,3,4
+Decim=5
+PlaneRownr=3
+PlaneFilter1=Corn
+
+[GDXDISP: chk_afv Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_poptrd Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_py Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_rent Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_shr Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_shrt Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_srv Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_sybd Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_trned_btu Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_trned_val Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_trnprod Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_w Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_a Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_afv Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_ag Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_agp Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_agv Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_auto Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_biofdsk Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_bioproc Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_biov Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_btu Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_elegen Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_emkt Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_en Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_enbal Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_encons Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_enconv Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_enprod Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_exy Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_ff Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_gal Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_l Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_lnd Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_lnd0 Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_lndp Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_lrent Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_m Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_mrkt Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_prod Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_rnweleP Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_shr Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_trd Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_trnM Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_trnP Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk0_x Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chm Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chn Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: CI_TARGET Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: CI0 Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: CI0_MOTO Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: CIt_moto Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: cl0 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: CL0_ Var 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: en_EI Par 4]
+PlaneDim=1
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=3,2,1,4
+Decim=0
+PlaneRownr=5
+PlaneFilter1=PME
+
+[GDXDISP: IEO2017_co2 Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ele_gen Par 4]
+PlaneDim=1
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=3,1,2,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: auto_markupT_coeff Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=3
+PlaneRownr=-1
+
+[RP:LOOP_NEW]
+1= --shockscn=REF --scn_ap=bau       --nt=2 --lp=1  r=.\lst\gtap2018_afv_new\a2  s=.\lst\t\new
+2= --shockscn=REF --scn_ap=bau       --nt=5 --lp=1  r=.\lst\gtap2018_afv_new\a2  s=.\lst\t\new
+3= --shockscn=REF --scn_ap=bau       --nt=9 --lp=2  r=.\lst\gtap2018_afv_new\a2  s=.\lst\t\new
+4=
+
+[RP:GW_LOOP]
+1= --scn=fs      --disc=disc_02    r=.\t\disc_02\a1 
+2= --scn=forprot    --disc=disc_02    r=.\t\disc_02\a1  s=.\t\disc_02\a2_forprot   
+3= --scn=forprot --disc=disc_02 r=.\t\disc_02\a1  s=.\t\disc_02\a2_forprot   
+4= --scn=forprot --disc=disc_02 r=.\t\disc_02\a1  s=.\t\disc_02\a2_forprot   o=.\t\disc_02\a2_forprot.lst   lf=.\t\disc_02\a2_forprot.log
+5=--scn=forprot --disc=disc_02 r=.\t\disc_02\a1  s=.\t\disc_02\a2_forprot   o=.\t\disc_02\a2_forprot.lst   
+6= --scn=forprot --disc=disc_02 r=.\t\disc_02\a1
+7=--scn=entax   --disc=disc_01 r=.\t\disc_01\a1 
+8=--scn=fwCap   --disc=disc_08     r=.\t\a1  s=.\t\a2_FWCap    
+9=--scn=FWCap   --disc=disc_08     r=.\t\a1  s=.\t\a2_FWCap    
+10= --scn=FWCap   --disc=disc_08 r=.\t\a1  s=.\t\a2_FWCap    
+11= --scn=FWCap   --disc=disc_08 r=.\t\a1  s=.\t\a2_FWCap     o=.\t\a2_FWCap.lst   lo=4   lf=.\t\a2_FWCap.log
+12= --scn=entax --disc=disc_08 r=.\t\a1  s=.\t\a2_entax   o=.\t\a2_entax.lst lo=4   lf=.\t\a2_entax.log  
+13= --disc=disc_08    --scn=entax r=.\t\a1   s=.\t\a2_entax 
+14= --disc=disc_08    --scn=fWCap r=.\t\a1   s=.\t\a2_fWCap 
+15=--scn=fWCap --disc=disc_08    r=.\t\a1   s=.\t\a2_fWCap 
+16=--scn=fWCap --disc=    r=.\t\a1   s=.\t\a2_fWCap 
+17=--scn=fWCap     r=.\t\a1   s=.\t\a2_fWCap 
+18=--scn=fWCap     r=.\t\a1
+19=--scn=forprot    r=.\t\a1
+20=--scn=extfee    r=.\t\a1
+
+[RP:AP_SCNSETUP]
+1=
+
+[RP:DATA_LANDTRANSFER]
+1=
+
+[RP:GW_MERGE_DISC]
+1=
+2= --disc=disc_01  
+
+[RP:GW_MODEL]
+1= --disc=disc_02  s=.\t\disc_02\a1      
+2= --disc=disc_02  s=.\t\disc_02\a1      o=.\t\disc_02\a1.lst   lf=.\t\disc_02\a1.log 
+3=--disc=disc_02  s=.\t\disc_02\a1      o=.\t\disc_02\a1.lst   lf=.\t\disc_02\a1.log   
+4=--disc=disc_02  s=.\t\disc_02\a1
+5=s=.\t\disc_02\a1
+6=  --disc=disc_02 
+7=  --disc=disc_02  s=.\t\disc_02\a2
+8=  --disc=disc_02  s=.\t\disc_02\a1
+9=  --disc=disc_01  s=.\t\disc_02\a1
+10=  --disc=disc_03  s=.\t\disc_02\a1
+11=  --disc=disc_01  s=.\t\disc_01\a1
+12=--disc=disc_01  
+13=--disc=disc_01  s=.\t\disc_01\a1  
+14=--disc=disc_03  s=.\t\disc_03\a1  
+15=s=.\t\a1
+16=
+
+[GDXDISP: c_AEEI Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=5
+PlaneRownr=-1
+
+[GDXDISP: c_y0_trd Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=6
+PlaneRownr=-1
+
+[GDXDISP: c2_le0 Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: c_re0_trd Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=6
+PlaneRownr=-1
+
+[RP:DATA_NEW]
+1= s=.\lst\task3_3\a1 
+2= s=.\lst\task3_1\a1 
+3=s=.\lst\7gdp\a1 
+4=s=.\lst\5gdp\a1 
+5=pw=500
+6=
+
+[RP:MATCH_CLEAN]
+1=r=.\lst\task3_3\a2    pw=500
+2=
+
+[RP:MODEL_NEW]
+1=
+
+[GDXDISP: c1_le0 Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[RP:UPDATE_EXTREND_NEW]
+1=
+
+[RP:UPDATE_ENTREND_NEW]
+1=
+
+[RP:POSTCHK_TREND]
+1=r=.\lst\task3_3\bau50   pw=500
+2=r=.\lst\1gdp\bau4    pw=500
+3=r=.\lst\1gdp\bau3    pw=500
+4=r=.\lst\1gdp\bau2    pw=500
+5=r=.\lst\1gdp\bau    pw=500
+6=r=.\lst\1gdp\bau1    pw=500
+7=r=.\lst\t\old    pw=500
+8=r=.\lst\t\old2    pw=500
+9=r=.\lst\t\old30  pw=500
+10=r=.\lst\t\new  pw=500
+11=
+
+[RP:SCNSETUP_2017]
+1=
+
+[GDXDISP: GDP_r_all Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: CCDFASOMoutput Par 5]
+PlaneDim=1
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=3,1,2,4,5
+Decim=7
+PlaneRownr=36
+PlaneFilter1=Production|Crops|Corn
+
+[GDXDISP: n_acompareAgSummary Par 7]
+PlaneDim=1
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=4,1,2,3,6,7,5
+Decim=7
+PlaneRownr=10
+PlaneFilter1=Agricultural Crop All Yield
+
+[GDXDISP: FASOMoutputEPPA2 Par 6]
+PlaneDim=3
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=6,3,4,1,2,5
+Decim=1
+PlaneRownr=93
+PlaneFilter1=VALUE
+PlaneFilter2=LandCover|Pasture|Unmanaged
+PlaneFilter3=Mha
+
+[RP:BAF2OTAQ_STEP3_TEMPLATE_CWSEDITS]
+1=
+
+[GDXDISP: n_acompareBALANCEP Par 5]
+PlaneDim=1
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=4,1,2,3,5
+Decim=0
+PlaneRownr=1
+PlaneFilter1=Production
+
+[RP:DATA_2010_NEW_V1_SWGE]
+1=pw=200
+2=
+
+[RP:REPORT4DOCU]
+1=--base="Bau"   --scn="task2_10"  r=.\lst\task2_10\merge_bau  pw=200  
+2=--base="Bau"   --scn="task4_10"  r=.\lst\task4_10\merge_bau  pw=200   
+3=--base="Bau"   --scn="task4_10"  r=.\lst\task4_10\merge  pw=200   
+4=--base="Bau"   --scn="task4_7"  r=.\lst\task4_7\merge  pw=200   
+5= r=.\lst\task3_6\merge 
+6=
+
+[RP:RUNBYSCN]
+1=
+
+[RP:REPORT_AGLAMP2017_CC]
+1= --base="baseline"   --scn="aglamp2017_cc" pw=200 r=.\lst\aglamp2018_cc\merge  
+2= --base="baseline"   --scn="aglamp2017_cc" pw=200 r=.\lst\aglamp2017_cc\merge  
+3=
+
+[RP:AGGR_AG_8R]
+1=
+
+[RP:AGLANDBIO_27R]
+1=
+
+[RP:DATA_AGCROPMIX_NEW]
+1=
+
+[RP:DATA_AGCROPMIX]
+1=
+
+[RP:ADAGE_27REGIONS]
+1=
+
+[RP:MODEL_TASK2_V1]
+1= r=.\lst\t\a1   s=.\lst\t\a2_biohdvOEV   o=.\lst\t\a2_biohdvOEV.lst  
+2=
+
+[RP:MODEL_TASK2]
+1=r=.\lst\t\a1   s=.\lst\t\a2_2 
+2=r=.\lst\t\a1   s=.\lst\t\a2_1 
+3=r=.\lst\t\a1   s=.\lst\t\a2 
+4=r=.\lst\bioAFV\a1   s=.\lst\bioAFV\a2 
+5=
+
+[RP:MODEL_V3&TASK2]
+1=  r=.\lst\t\a1   s=.\lst\t\a2
+2=  r=.\lst\t\a1   r=.\lst\t\a2
+3=
+
+[RP:ENERGY_BTU_TRAN]
+1=
+
+[RP:SCNSETUP_2018_FORALLREG]
+1=
+
+[RP:DATA_FORNEW]
+1=
+
+[GDXDISP: enprod_btu Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_mpge Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=5
+PlaneRownr=-1
+
+[GDXDISP: gdp_ Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[RP:AFV_EPA]
+1=
+
+[GDXDISP: macro Par 4]
+PlaneDim=1
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=3,1,2,4
+Decim=3
+PlaneRownr=-1
+
+[RP:LOOP_V6_OILP]
+1=
+
+[RP:AFV_EPA_20180606]
+1=
+
+[RP:LOOP_V6_T]
+1=
+
+[RP:REPORT4MCIII]
+1=--base="Ref"   --scn="task2_10"  r=.\lst\task2_10\merge  pw=200 
+2=r=.\lst\6gdp\a4   pw=500
+3=
+
+[RP:AGLAMP2017_HYDRO_SCNSETUP]
+1=
+
+[RP:AGLAMP2017_CC_SCNSETUP]
+1=
+
+[RP:REPORT_MCIII]
+1=  r=.\merge\lst\DA_12_ffafvmerge\merge  pw=200  
+2=
+
+[RP:SCNSETUP_2018]
+1=
+
+[GDXDISP: ADAGE_AEEI Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[RP:ADAGE]
+1=
+2=--shockscn=REF --scn=ref --nt=9 --lp=25 
+
+[GDXDISP: tran_vmt Par 3]
+PlaneDim=1
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=2,1,3
+Decim=7
+PlaneRownr=12
+PlaneFilter1=RodF_OEV
+
+[RP:LOOP_V9]
+1=--shockscn=REF --scn=ref --nt=2 --eafv=0.25 r=.\lst\DA_12_e25%ff8%_nolimit\a2 
+2=--shockscn=REF --scn=hop --nt=9 --eafv=0.25 --vrw=2.0 --lerw=0.75 r=.\lst\DA_12_e25%ff8%_nolimit\hop45   s=.\lst\DA_12_e25%ff8%_nolimit\hop50_1
+3=--shockscn=REF --scn=hop --nt=9 --eafv=0.25 --vrw=1.0 --lerw=0.75 r=.\lst\DA_12_e25%ff8%_nolimit\hop45   s=.\lst\DA_12_e25%ff8%_nolimit\hop50_1
+4=--shockscn=REF --scn=hop --nt=9 --eafv=0.25 ==vrw=1.0 --lerw=0.75 r=.\lst\DA_12_e25%ff8%_nolimit\hop45   s=.\lst\DA_12_e25%ff8%_nolimit\hop50_1
+5=--shockscn=REF --scn=hop --nt=9 --eafv=0.25 --lerw=0.75 r=.\lst\DA_12_e25%ff8%_nolimit\hop45   s=.\lst\DA_12_e25%ff8%_nolimit\hop50_1
+6=--shockscn=REF --scn=hop --nt=9 --eafv=0.25 --vrw=0.2  r=.\lst\DA_12_e25%ff8%_nolimit\hop45   s=.\lst\DA_12_e25%ff8%_nolimit\hop50_1
+7=--shockscn=REF --scn=hop --nt=9 --eafv=0.25 --vrw=1.0  r=.\lst\DA_12_e25%ff8%_nolimit\hop45   s=.\lst\DA_12_e25%ff8%_nolimit\hop50_1
+8=--shockscn=REF --scn=hop --nt=9 --eafv=0.25 --vrw=0.7  r=.\lst\DA_12_e25%ff8%_nolimit\hop45   s=.\lst\DA_12_e25%ff8%_nolimit\hop50_1
+9=--shockscn=REF --scn=hop --nt=9 --eafv=0.25 --vrw=0.7  r=.\lst\DA_12_e25%ff8%_nolimit\hop45   
+10=--shockscn=REF --scn=hop --nt=9 --eafv=0.25  r=.\lst\DA_12_e25%ff8%_nolimit\hop45   s=.\lst\DA_12_e25%ff8%_nolimit\hop50   pw=500  
+11= --shockscn=REF --scn=ref --nt=3 --eafv=0.25  r=.\lst\DA_12_e25%ffs4%g8%_nolimit\ref15   s=.\lst\DA_12_e25%ffs4%g8%_nolimit\ref20   pw=500 
+12=
+13= --shockscn=REF --scn=ref --nt=3 --eafv=0.25  r=.\lst\DA_12_e25%ffs2%g4%_nolimit\ref15   s=.\lst\DA_12_e25%ffs2%g4%_nolimit\ref20   pw=500    
+14=--shockscn=REF --scn=ref --nt=3 --eafv=0.25  r=.\lst\DA_12_e25%ffs4%g8%_nolimit\ref15  
+15= --shockscn=REF --scn=ref --nt=2 --eafv=0.25 r=.\lst\DA_12_e25%ffs2%g4%_nolimit\a2
+
+[RP:LOOP_V10]
+1=
+
+[GDXDISP: AEEI Par 4]
+PlaneDim=1
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=3
+PlaneRownr=7
+PlaneFilter1=ROW
+
+[GDXDISP: re0_trd Par 4]
+PlaneDim=1
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=4
+PlaneRownr=5
+PlaneFilter1=ROW
+
+[GDXDISP: rnwe0_trd Par 4]
+PlaneDim=1
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=3
+PlaneRownr=-1
+
+[GDXDISP: AEEI Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,3,2
+Decim=6
+PlaneRownr=-1
+
+[GDXDISP: y0_trd Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,3,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: y0_trd Par 4]
+PlaneDim=1
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,3,2,4
+Decim=3
+PlaneRownr=6
+PlaneFilter1=AFR
+
+[TEXTDIFFER]
+IGNOREBLANKS=0
+IGNORECASE=1
+
+[GDXDISP: rnwe0_trd Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,3,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: re0_trd Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,3,2
+Decim=7
+PlaneRownr=-1
+
+[RP:LOOP_V12]
+1=--shockscn=REF --scn=ref --nt=1 --eafv=0.25  --s=8% --mpge=2.4  r=.\lst\DA_15_e25%ff8%_mk1\a2   s=.\lst\DA_15_e25%ff8%_mk1\ref10_1 
+2=--shockscn=REF --scn=ref --nt=1 --eafv=0.25  --s=8% --mpge=2.2  r=.\lst\DA_15_e25%ff8%_mk1\a2   s=.\lst\DA_15_e25%ff8%_mk1\ref10_1 
+3=--shockscn=REF --scn=ref --nt=1 --eafv=0.25  --s=8% --mpge=2.15  r=.\lst\DA_15_e25%ff8%_mk1\a2   s=.\lst\DA_15_e25%ff8%_mk1\ref10_1 
+4=--shockscn=REF --scn=ref --nt=1 --eafv=0.25  --s=8% --mpge=2.5  r=.\lst\DA_15_e25%ff8%_mk1\a2   s=.\lst\DA_15_e25%ff8%_mk1\ref10_2  
+5=--shockscn=REF --scn=ref --nt=1 --eafv=0.25  --s=8% --mpge=10  r=.\lst\DA_15_e25%ff8%_mk1\a2   s=.\lst\DA_15_e25%ff8%_mk1\ref10_4  
+6=--shockscn=REF --scn=ref --nt=1 --eafv=0.25  --s=8% --mpge=5  r=.\lst\DA_15_e25%ff8%_mk1\a2   s=.\lst\DA_15_e25%ff8%_mk1\ref10_3  
+7=--shockscn=REF --scn=ref --nt=1 --eafv=0.25  --s=8% --mpge=2  r=.\lst\DA_15_e25%ff8%_mk1\a2   s=.\lst\DA_15_e25%ff8%_mk1\ref10_1  
+8=--shockscn=REF --scn=ref --nt=3 --eafv=0.25  --s=8%  r=.\lst\clean\a2 
+9=
+
+[RP:LOOP_V13]
+1=--shockscn=REF --scn=ref --nt=3 --eafv=0.25  --s=8%  r=.\lst\clean\a2
+2=
+
+[RP:MATCH2]
+1=
+
+[RP:TEST2]
+1=
+
+[RP:TEST]
+1=
+
+[RP:EXEC]
+1=
+
+[RP:READ_AUTO_AEO]
+1=pw=200
+2=
+
+[GDXDISP: afv_yT0 Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=2
+PlaneRownr=-1
+
+[RP:MODEL_V1]
+1= r=.\lst\DA_15_ff8%_t1\a1   s=.\lst\DA_15_ff8%_t1\a2  
+2=
+
+[RP:LOOP_V2]
+1=--scn=hop --nt=2 --e=2.5    r=.\lst\DA_6\a2      s=.\lst\DA_6\hop15 
+2= --scn=ref --nt=7 --e=2.5  --oeu=1.20   r=.\lst\t_6\ref35  
+3= --scn=ref --nt=7 --e=2.5  --ous=1.20   r=.\lst\t_6\ref35  
+4= --shockscn=bau --nt=2 --e=2.5    r=.\lst\t_6\a2      s=.\lst\t_6\bau15  
+5=
+
+[RP:DATA_V1]
+1=     --s=0.04  --g=0.08      pw=500
+2=pw=500
+3=
+
+[RP:LOOP_V1]
+1=--shockscn=REF --scn=ref --nt=1 --eafv=0.25  --g=8%  r=.\lst\DA_15_ff8%_t1\a2   s=.\lst\DA_15_ff8%_t1\ref10   pw=500                                      
+2=--shockscn=REF --scn=ref --nt=1 --eafv=0.25  --g=8%  r=.\lst\DA_15_ff8%_t1\a2   s=.\lst\DA_15_ff8%_t1\ref10_4   pw=500                                      
+3=--shockscn=REF --scn=ref --nt=1 --eafv=0.25  --g=8%  r=.\lst\DA_15_ff8%_t1\a2   s=.\lst\DA_15_ff8%_t1\ref10_3a   pw=500                                      
+4=--shockscn=REF --scn=ref --nt=1 --eafv=0.25  --g=8%  r=.\lst\DA_15_ff8%_t1\a2   s=.\lst\DA_15_ff8%_t1\ref10_2a   pw=500                                      
+5=--shockscn=REF --scn=ref --nt=1 --eafv=0.25  --g=8%  r=.\lst\DA_15_ff8%_t1\a2   s=.\lst\DA_15_ff8%_t1\ref10_3   pw=500                                      
+6=--shockscn=REF --scn=ref --nt=1 --eafv=0.25  --g=8%  r=.\lst\DA_15_ff8%_t1\a2   s=.\lst\DA_15_ff8%_t1\ref10_2   pw=500                                      
+7=--shockscn=REF --scn=ref --nt=1 --eafv=0.25  --g=8%  r=.\lst\DA_15_ff8%_t1\a2   s=.\lst\DA_15_ff8%_t1\ref10_1   pw=500                                      
+8=--shockscn=REF --scn=ref --nt=2 --eafv=0.25  --g=8%  r=.\lst\DA_15_ff8%_t1\a2   s=.\lst\DA_15_ff8%_t1\ref15   pw=500                                      
+9=--shockscn=REF --scn=ref --nt=2 --eafv=0.25  --s=8%  r=.\lst\DA_15_ff8%_t1\a2   s=.\lst\DA_15_ff8%_t1\ref15   pw=500                                      
+10= --shockscn=Bau  --nt=9   --crus=1.05  --gus=0.80 --eus=0.12   --erw=1.47   r=.\lst\task4_8t\bau45_t1 
+11= --shockscn=Bau  --nt=4   r=.\lst\task4_8t\bau20_t1  s=.\lst\task4_8t\bau40_t1  pw=500   
+12= --shockscn=Bau  --nt=4   r=.\lst\task4_8t\bau20_t1  s=.\lst\task4_8t\bau25_t1  pw=500   
+13= --shockscn=Bau  --nt=5   r=.\lst\task4_8t\bau25_t1  s=.\lst\task4_8t\bau30_t1  pw=500 
+14=
+
+[RP:MODEL_STRUCTURE]
+1=  r=.\t\a1 --edyr=2040  s=.\t\a2_40 
+2=
+
+[RP:DATA_V2]
+1=    --s=0.04  --g=0.08     s=.\lst\DA_15_ff8%_t7\a1   pw=500
+2=    --s=0.04  --g=0.08     s=.\lst\DA_15_ff8%_t7\a1
+3=
+
+[RP:LOOP_V3]
+1=--shockscn=REF --scn=ref --nt=3 --eafv=0.25  --g=8%  r=.\lst\DA_15_ff8%_t11\a2 
+2= --shockscn=REF --scn=ref --nt=3 --eafv=0.25  --g=8%  r=.\lst\DA_15_ff8%_t10\a2
+3=--shockscn=REF --scn=ref --nt=9 --eafv=0.25  --g=8%  r=.\lst\DA_15_ff8%_t7\a2
+4= --shockscn=Bau  --nt=9 --nbr=1.40 --ocn=0.27 --neu=1.9 --geu=0.80 --exl=0.5 --nxa=1.9 --gaf=0.72  --grw=0.70 r=.\lst\task4_10\bau45 
+5=gams loop_v3.gms  --shockscn=Bau  --nt=8   r=.\lst\task4_10\bau40  s=.\lst\task4_10\bau45  pw=500
+6=--shockscn=Bau  --nt=6  --gxa=0.60  --cxa=1.65 r=.\lst\task4_10\bau30
+7= --shockscn=Bau  --nt=6 --nbr=1.26   --neu=1.60  --nxl=1.60  --oxa=0.44 r=.\lst\task4_10\bau30 
+8=
+
+[RP:MODEL_V2]
+1=r=.\lst\DA_15_ff8%_t7\a1   s=.\lst\DA_15_ff8%_t7\a2 
+2=  r=.\lst\t\a1   
+3=  r=.\lst\t\a1   s=.\lst\t\a2_bioall_elas1   o=.\lst\t\a2_bioall_elas1.lst    
+4=  r=.\lst\t\a1   s=.\lst\t\a2_bioall   o=.\lst\t\a2_bioall.lst    
+5=gams model.gms  r=.\lst\t\a1   s=.\lst\t\a2_bioall   o=.\lst\t\a2_bioall.lst    
+6=r=.\lst\t\a1   s=.\lst\t\a2_bioldvafv   o=.\lst\t\a2_bioldvafv.lst      
+7= r=.\lst\t\a1   s=.\lst\t\a2_biohdvall1   o=.\lst\t\a2_biohdvall1.lst 
+8= r=.\lst\t\a1   s=.\lst\t\a2_biohdvall   o=.\lst\t\a2_biohdvall.lst 
+9=r=.\lst\t\a1   s=.\lst\t\a2_biohdvOEV
+10=r=.\lst\t\a1   s=.\lst\t\a2_biohdv
+11=r=.\lst\t\a1   s=.\lst\t\a2_7
+12=r=.\lst\t\a1   s=.\lst\t\a2_6
+13=r=.\lst\t\a1   s=.\lst\t\a2_5
+14=r=.\lst\t\a1   s=.\lst\t\a2_4
+15=r=.\lst\t\a1   s=.\lst\t\a2_3
+16=r=.\lst\t\a1   s=.\lst\t\a2_2
+17=
+
+[RP:DATA_V3]
+1=  --s=0.04  --g=0.08     s=.\lst\DA_15_ff8%_12\a1   pw=500
+2=
+
+[RP:TRAN_DATA4AGGR_20180606]
+1=
+
+[RP:AGGR_TRAN]
+1=pw=200
+2=
+
+[GDXDISP: tran_enbtu Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_enpric Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_envalu Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_pric Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_proc Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_vkt Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: USA_auto_price Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_pricT Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[RP:RODF_DATA_20190514]
+1=
+
+[RP:DATA_AGBIOMASS]
+1=
+
+[RP:LOOP_V4]
+1=--shockscn=REF --scn=lop --nt=2 --eafv=0.25  --g=8%   r=.\lst\DA_15_ff8%_t15\a2 
+2= --shockscn=REF --scn=ref --nt=2 --eafv=0.25  --g=8%  r=.\lst\DA_15_ff8%_12\a2   s=.\lst\DA_15_ff8%_12\ref15   pw=500
+3= --shockscn=bau  --nt=2  r=.\lst\t\bau10 --lus=2.4    s=.\lst\t\bau15_1 o=.\lst\t\bau15_1.lst pw=500 
+4= --shockscn=bau  --nt=1  r=.\lst\t\a2 --lus=2.4    s=.\lst\t\bau10   o=.\lst\t\bau10.lst pw=500    
+5= --shockscn=bau  --nt=2  r=.\lst\t\a2 --lus=2.4    s=.\lst\t\bau15_2 o=.\lst\t\bau15_2.lst pw=500   
+6= --shockscn=REF  --nt=2  r=.\lst\t\a2 --lus=0.4   
+7= --shockscn=REF  --nt=2  r=.\lst\t\a2  s=.\lst\t\REF15  pw=500  
+8= --shockscn=REF  --nt=2  r=.\lst\bioAFV\a2  s=.\lst\bioAFV\REF15  pw=500  
+9= --shockscn=REF  --nt=2  r=.\lst\bioAFV\REF10_1  s=.\lst\bioAFV\REF15  pw=500  
+10= --shockscn=REF  --nt=1 r=.\lst\bioAFV\a2  s=.\lst\bioAFV\REF10_1  pw=500  
+11= --shockscn=REF  --nt=2  r=.\lst\bioAFV\REF10  s=.\lst\bioAFV\REF15  pw=500  
+12= --shockscn=REF  --nt=1  r=.\lst\bioAFV\a2  s=.\lst\bioAFV\REF10  pw=500  
+13=--shockscn=REF     --nt=1  r=.\lst\bioAFV\a2   s=.\lst\bioAFV\REF10  
+14=--shockscn=REF     --nt=2  r=.\lst\bioAFV\a2   s=.\lst\bioAFV\REF15
+15=--shockscn=REF     --nt=3  r=.\lst\bioAFV\a2   s=.\lst\bioAFV\REF20
+16=--shockscn=REF     --nt=3  r=.\lst\bioAFV\a2   s=.\lst\bioAFV\REF15
+17=--shockscn=REF     --nt=5  r=.\lst\bioAFV\a2   s=.\lst\bioAFV\REF10  
+18=  --shockscn=Bau     --nt=2  r=.\lst\task2_10\bau10        s=.\lst\task2_10\bau15   
+19=--shockscn=HiSoy   --nt=1  r=.\lst\task2_10\a2     s=.\lst\task2_10\HiSoy10   pw=500 
+20=--shockscn=Bau     --nt=1  r=.\lst\task2_10\a2     s=.\lst\task2_10\bau10     pw=500      
+
+[RP:LOOP_V5]
+1=--shockscn=REF --scn=lop --nt=3 --eafv=0.25  --g=8% --leus=1.04 --lecn=1.02 --lcn=1.04 --pcn=1.02 r=.\lst\DA_15_ff8%_t21\lop15  
+2=--shockscn=REF --scn=lop --nt=3 --eafv=0.25  --g=8% --leus=1.04 --lecn=1.02 --lcn=1.04 --pcn=1.02 r=.\lst\DA_15_ff8%_t17\lop15  
+3= --shockscn=bau  --nt=1  r=.\lst\t1\a2     s=.\lst\t1\bau10   o=.\lst\t1\bau10.lst pw=500 
+4= --shockscn=Bau  --nt=9  r=.\lst\t\Bau45  s=.\lst\t\Bau50_1  pw=500
+5= --shockscn=bau  --nt=1  r=.\lst\t\a2_3    s=.\lst\t\bau10_3  pw=500
+6= --shockscn=bau  --nt=1  r=.\lst\t\a2_3    s=.\lst\t\bau10_3
+7= --shockscn=bau  --nt=1  r=.\lst\t\a2    s=.\lst\t\bau10_3
+8= --shockscn=bau  --nt=1  r=.\lst\t\a2    s=.\lst\t\bau10_2
+9= --shockscn=bau  --nt=2  r=.\lst\t\bau10 s=.\lst\t\bau15   o=.\lst\t\bau15.lst pw=500   
+10=--nt=2  r=.\lst\t\bau10 s=.\lst\t\bau15   o=.\lst\t\bau15.lst pw=500   
+11= --shockscn=bau  --nt=1  r=.\lst\t\a2    s=.\lst\t\bau10   o=.\lst\t\bau10.lst pw=500     
+12=  --shockscn=bau  --nt=2  r=.\lst\t\bau10 s=.\lst\t\bau15_1 o=.\lst\t\bau15_1.lst pw=500     
+13= --shockscn=bau  --nt=1  r=.\lst\t\a2    s=.\lst\t\bau10
+14=
+
+[RP:MODEL_V3]
+1= r=.\lst\DA_15_ff8%_t23\a1   s=.\lst\DA_15_ff8%_t23\a2    
+2= r=.\lst\t\a1   s=.\lst\t\a2  
+3= r=.\lst\t\a1   s=.\lst\t\a2_biohdvOEV1   o=.\lst\t\a2_biohdvOEV1.lst  
+4=
+
+[RP:LOOP_V6]
+1=--shockscn=REF --scn=ref --nt=2 --eafv=0.25  --g=8%  r=.\lst\DA_15_ff8%_t23\b2   s=.\lst\DA_15_ff8%_t23\refb15  
+2=--shockscn=REF --scn=ref --nt=2 --eafv=0.25  --g=8%  r=.\lst\DA_15_ff8%_t23\a2   s=.\lst\DA_15_ff8%_t23\ref15  
+3=--shockscn=REF --scn=ref --nt=2 --eafv=0.25  --g=8%  r=.\lst\DA_15_ff8%_t23\a2   s=.\lst\DA_15_ff8%_t23\ref15 
+4=--shockscn=Bau  --nt=8 --lbr=1.4  --cxa=0.92 --laf=0.95 --leaf=1.05 --vrw=0.82  r=.\lst\t7\Bau40_a3
+5= --shockscn=Bau  --nt=8  --cus=0.92  --lbr=2.0 --cxl=0.90 --cxa=0.99 --vaf=1.42  r=.\lst\t7\Bau40_a3  
+6= --shockscn=Bau  --nt=8  r=.\lst\t7\Bau40  s=.\lst\t7\Bau45  pw=500
+7= --shockscn=Bau  --nt=4 --lebr=1.22 --lexl=1.00 --lxl=0.6  r=.\lst\t6\Bau20_a 
+8= --shockscn=Bau  --nt=4 --lebr=1.22 --lexl=1.00 --lxl=0.6
+9=--shockscn=Bau  --nt=4  r=.\lst\t2\Bau20_a  
+10=  --shockscn=Bau  --nt=9 --leus=1.11  --ous=0.6   --cus=0.86 --cbr=0.90 --lecn=1.55 --ccn=1.25 --ceu=0.63 --leeu=1.19 --cxl=0.90  --lexa=1.00 --lxa=0.1  --laf=2.2 --lerw=0.58 --lrw=5.2   r=.\lst\t6\Bau45
+11=
+12=--leus=1.11  --ous=0.6   --cus=0.86 --cbr=0.90 --lecn=1.55 --ccn=1.25 --ceu=0.63 --leeu=1.19 --cxl=0.90  --lexa=1.00 --lxa=0.1  --laf=2.2 --lerw=0.58 --lrw=5.2   r=.\lst\t6\Bau45
+13=--shockscn=Bau  --nt=5   --lus=0.5   --lbr=0.6 --lebr=1.22   --lxl=1.2 --lexl=0.95 --lexa=1.04  --lxa=3.0 --leaf=1.00   r=.\lst\t6\Bau25  s=.\lst\t6\Bau30_12  pw=500 
+14=--shockscn=Bau  --nt=5   --lus= --lbr=0.6 --lebr=1.22   --lxl=1.2 --lexl=0.95 --lexa=1.04  --lxa=3.0 --leaf=1.00   r=.\lst\t6\Bau25  s=.\lst\t6\Bau30_12  pw=500 
+15=--shockscn=Bau  --nt=5    --lbr=0.6 --lebr=1.22   --lxl=1.2 --lexl=0.95 --lexa=1.04  --lxa=3.0 --leaf=1.00   r=.\lst\t6\Bau25  s=.\lst\t6\Bau30_12  pw=500 
+16=--shockscn=Bau  --nt=5  --1us=0.5  --lbr=0.6 --lebr=1.22   --lxl=1.2 --lexl=0.95 --lexa=1.04  --lxa=3.0 --leaf=1.00   r=.\lst\t6\Bau25  s=.\lst\t6\Bau30_12  pw=500 
+17= --shockscn=Bau  --nt=5  --1us=0.5  --lbr=0.6 --lebr=1.22   --lxl=1.2 --lexl=0.95 --lexa=1.04  --lxa=3.0 --leaf=1.00   r=.\lst\t6\Bau25  s=.\lst\t6\Bau30_12  pw=500                         
+18=--shockscn=Bau  --nt=4  r=.\lst\t6\Bau20_12  s=.\lst\t6\Bau25_1  pw=500  
+19=--shockscn=Bau  --nt=4  r=.\lst\t6\Bau20_10  s=.\lst\t6\Bau25_1  pw=500  
+20=--shockscn=bau  --nt=2  r=.\lst\t6\bau10_2  s=.\lst\t6\bau15_2  pw=500 
+
+[RP:MODEL_V8T]
+1=  r=.\lst\DA_15_ff8%_t1\a1   s=.\lst\DA_15_ff8%_t1\a2  
+2=  r=.\lst\DA_15_e25%ff8%_mk1\a1   s=.\lst\DA_15_e25%ff8%_mk1\a2  
+3=
+
+[RP:UPDATE_EXTREND_AEOGDP_CHN_TRAN_TEST1_RAW]
+1=
+
+[RP:MODEL_V8]
+1=      r=.\lst\clean\a1   s=.\lst\clean\a2  
+2=model_v8.gms       r=.\lst\clean\a1   s=.\lst\clean\a2  
+3= r=.\lst\bioAFV\a1   s=.\lst\bioAFV\a2 
+4=
+
+[RP:CAFEMPG]
+1=
+
+[RP:MODEL_V4]
+1=r=.\lst\DA_15_ff8%_t23\a1   s=.\lst\DA_15_ff8%_t23\b2 
+2= r=.\lst\DA_15_ff8%_t15\a1   s=.\lst\DA_15_ff8%_t15\a2
+3=gams model_v4.gms  r=.\lst\DA_15_ff8%_t15\a1   s=.\lst\DA_15_ff8%_t15\a2
+4= r=.\lst\t\a1   s=.\lst\t\a2
+5= r=.\lst\t\a1   s=.\lst\t\a2_v4
+6= r=.\lst\t\a1   s=.\lst\t\a2_all
+7= r=.\lst\t\a1   s=.\lst\t\a2_2
+8= r=.\lst\t\a1   s=.\lst\t\a2_1
+9=
+
+[RP:MODEL_V5]
+1=r=.\lst\t\a1  s=.\lst\t\a2
+2=r=.\lst\t\a1  s=.\lst\t\a2_3
+3=r=.\lst\t\a1  s=.\lst\t\a2_2  
+4=r=.\lst\t\a1  s=.\lst\t\a2_2  o=.\lst\t\a2_2advb.lst  
+5=r=.\lst\t\a1  s=r=.\lst\t\a2_2  o=.\lst\t\a2_2advb.lst  
+6=r=.\lst\t\a1  s=r=.\lst\t\a2_2
+7=r=.\lst\t\a1  s=r=.\lst\t\a2_1
+8=
+
+[RP:READ_RODF_AEO]
+1=pw=500
+2=
+
+[RP:MODEL_V6]
+1= r=.\lst\t1\a1   s=.\lst\t1\a2
+2=
+
+[RP:EPPACOEF]
+1=
+
+[RP:EPPABENCH]
+1=
+
+[RP:1_VINTAGING]
+1=
+
+[RP:DEFAULTPARAMS]
+1=
+
+[RP:LOOP_V8]
+1=--shockscn=REF --scn=lop --nt=2 --eafv=0.25 r=.\lst\DA_12_e25%ff8%_eff\a2       s=.\lst\DA_12_e25%ff8%_eff\lop15   pw=500  
+2= --shockscn=REF --scn=ref --nt=5 --lbr=0.35 --leu=1.5 --lexl=0.99 --cxa=1.36 --caf=0.75 --lerw=0.96 --crw=0.93  r=.\lst\DA_12\ref25   s=.\lst\DA_12\ref30_18   pw=500
+3=--shockscn=REF --scn=ref --nt=6 --cus=1.1  --lebr==1.54  --vbr=1.16  r=.\lst\DA_12\ref30   s=.\lst\DA_12\ref35_5   pw=500 
+4=--shockscn=REF --scn=ref --nt=6 --cus= --lebr==1.54  --vbr=1.16  r=.\lst\DA_12\ref30   s=.\lst\DA_12\ref35_5   pw=500 
+5=--shockscn=REF --scn=ref --nt=6 --lebr==1.54  --vbr=1.16  r=.\lst\DA_12\ref30   s=.\lst\DA_12\ref35_5   pw=500 
+6=--shockscn=REF --scn=ref --nt=1  r=.\lst\DA_11\a2   s=.\lst\DA_11\ref10_1   pw=500 
+7= --shockscn=REF --scn=ref --nt=3 --cus=1.20 --lus=1.5  r=.\lst\DA_11\ref15   s=.\lst\DA_11\ref20_7 pw=500  
+8=--shockscn=REF --scn=ref --nt=1  r=.\lst\DA_11\a2   s=.\lst\DA_11\ref10   pw=500 
+9=
+
+[RP:CORE]
+1=
+
+[RP:EPPAEXEC]
+1=
+
+[RP:EPPATREND]
+1=
+
+[RP:DATA_V4]
+1=  --s=0.04  --g=0.08     s=.\lst\DA_15_ff8%_t31\a1     
+2=pw=500
+3=
+
+[RP:LOOP_V7]
+1=--shockscn=REF --scn=ref --nt=4 --eafv=0.25  --a=9  --etrn=2.0 --e1afv=1.25 --g=8%  r=.\lst\DA_15_ff8%_t30\ref20 
+2=--shockscn=REF --scn=ref --nt=2 --eafv=0.25  --a=3  --g=8%  r=.\lst\DA_15_ff8%_t27\a2
+3=--shockscn=REF --scn=hop --nt=7 --eafv=0.25  --a=6  --g=8%  r=.\lst\DA_15_ff8%_t26\hop35  
+4=--shockscn=REF --scn=ref --nt=2 --eafv=0.25  --a=6  --g=8%  r=.\lst\DA_15_ff8%_t26\a2   s=.\lst\DA_15_ff8%_t26\ref15  
+5=--shockscn=REF --scn=ref --nt=2 --eafv=0.25  --g=8% -- --a=3   r=.\lst\DA_15_ff8%_t25\a2   s=.\lst\DA_15_ff8%_t25\ref15 
+6=--shockscn=REF --scn=ref --nt=2 --eafv=0.25  --g=8%  r=.\lst\DA_15_ff8%_t25\a2   s=.\lst\DA_15_ff8%_t25\ref15 
+7=--shockscn=REF --scn=ref --nt=2 --eafv=0.25  --g=8%  r=.\lst\DA_15_ff8%_t23\b2   s=.\lst\DA_15_ff8%_t23\refb15  
+8=--shockscn=REF --scn=ref --nt=2  r=.\lst\eob10_elhafv@0.4\a2
+9=--shockscn=REF --scn=hop --nt=3  r=.\lst\DA_7\a2   s=.\lst\DA_7\hop20 
+10= --shockscn=REF --scn=ref --nt=3 r=.\lst\DA_7\a2   s=.\lst\DA_7\ref20
+11= --shockscn=REF --scn=ref --nt=3 r=.\lst\DA_7\a2 
+12=
+
+[RP:LOOP_V7K]
+1=--shockscn=REF --scn=ref --nt=9 --eafv=0.25   --etrn=0.5 --g=8% --e1afv=0.75   r=.\lst\DA_15_ff8%_t32\a2
+2=
+
+[GDXDISP: gdp_ieo2017growth Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: gdp_ieo2017r Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: gdp_ieo2017trd Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: GDP_r_all_trd Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: gdp_aeogrowth Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: gdp_aeor Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: gdp_aeotrd Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: aggrowth_8r Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: His_aggrowth_8r Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: His_agshare_8r Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: His_agvalue_8r Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: His_gdp_8r Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[RP:AFVMARKUP]
+1=
+
+[RP:GDP_AEO_SCN]
+1=
+
+[GDXDISP: GDP_r_all_trd Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[RP:DATAFROMSHOCK]
+1=
+
+[RP:MODEL_V7]
+1=--etrn=0.5 r=.\lst\DA_15_ff8%_t31\a1   s=.\lst\DA_15_ff8%_t31\a2    
+2=  r=.\lst\DA_12_e25%ff8%_nolimit\a1   s=.\lst\DA_12_e25%ff8%_nolimit\a2 
+3=
+4= r=.\lst\test\a1   s=.\lst\test\a2  
+5=  r=.\lst\test\a1   s=.\lst\test\a2  
+6= r=.\lst\DA_7\a1   s=.\lst\DA_7\a2  
+7=  r=.\lst\DA_7\a1   s=.\lst\DA_7\a2 
+8= r=.\lst\t6\a1   s=.\lst\t6\a2
+9=r=.\lst\t2\a1   s=.\lst\t3\a2   pw=500
+10=r=.\lst\t2\a1   s=.\lst\t2\a2   pw=500
+11=r=.\lst\t2\a1   s=.\lst\t2\a2 
+
+[RP:DATA7_AFV]
+1=
+
+[GDXDISP: c_afvT_ref Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[RP:UPDATE_ENTREND_K]
+1=
+
+[RP:DATA_C_AFVT]
+1=
+
+[RP:LOOP_VINTAGE]
+1=
+
+[RP:RUN_POIL]
+1=
+
+[RP:SCNSETUP_2018_ALLREG]
+1=
+
+[RP:LOOP_T1]
+1=--shockscn=REF     --nt=2  r=.\lst\DA\shock\a2   s=.\lst\DA\shock\REF15_i8      pw=500   
+2=--shockscn=REF     --nt=2  r=.\lst\DA\shock\a2   s=.\lst\DA\shock\REF15      pw=500   
+3=--shockscn=REF     --nt=2  r=.\lst\DA\a2   s=.\lst\DA\shock\REF15      pw=500   
+4= --scn=ref --nt=2     r=.\lst\DA\t2   s=.\lst\DA\lop15   pw=500 
+5= --scn=ref --nt=8     r=.\lst\DA\t2   s=.\lst\DA\ref50   pw=500 
+6= --scn=ref --nt=2     r=.\lst\DA\t2   s=.\lst\DA\hop15   pw=500 
+7=hop
+8=--shockscn=REF --scn=ref --nt=2     r=.\lst\DA\t2   s=.\lst\DA\lop15   pw=500 
+9=--shockscn=REF --scn=ref --nt=2     r=.\lst\DA\a2   s=.\lst\DA\lop15   pw=500 
+10=
+
+[RP:ANALYSIS]
+1=
+
+[RP:PCRU_SCNSETUP]
+1=
+
+[RP:REPORT4GTAP2019]
+1=r=.\merge\lst\DA_15_ff8%_t21\merge   --vsn=DA   --run=15  --scn=ff8%_t21   pw=500
+2=r=.\merge\lst\DA_15_ff8%_t21\merge   --vsn=DA   --run=15  --scn=ff8%_t21 
+3=
+
+[RP:RUN_ALL]
+1=
+
+[RP:REPORT4EIA_EN]
+1=r=.\lst\3gdp\bau50    pw=200
+2=r=.\lst\gtap2018_afv\bau    pw=200
+3=r=.\lst\ap\bau    pw=200
+4=
+
+[RP:READ_AIRPULLUTION]
+1=pw=500
+2=
+
+[RP:SCENARIO_LOOP_RTI_REFSCN]
+1=--refscn=AEO_Ref_High  r=.\t\a3_zero_biomass  
+2=  r=.\t\a2_80
+3=  r=.\t\a2
+4=  r=.\t\a3_80 
+5=
+
+[GDXDISP: c_afvT Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: c_rnwe0_trd Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=5
+PlaneRownr=-1
+
+[RP:MODEL_JW]
+1=
+
+[RP:ANALYSIS_BIOSHOCK]
+1=
+
+[RP:LANDCON_CONSTRAINTS]
+1=
+
+[RP:SCENARIO_LOOP_DORUNS]
+1=
+
+[RP:EPPALOOP]
+1=
+
+[RP:EPPACORE]
+1=
+
+[RP:AAASCRIPTJJ]
+1=
+
+[RP:BAF2OTAQ_STEP1_MERGECONVERT]
+1=
+
+[GDXDISP: ag_lndh Par 4]
+PlaneDim=1
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: c_afvt0 Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=3
+PlaneRownr=-1
+
+[RP:READ_GAS_DATA - TEST]
+1=
+
+[RP:SCENARIO_LOOP_ALLCASES]
+1=
+
+[GDXDISP: nket Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=0
+PlaneRownr=-1
+
+[GDXDISP: tran_mpgeV Par 4]
+PlaneDim=1
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=0
+PlaneRownr=-1
+
+[GDXDISP: tran_vmtV Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=1
+PlaneRownr=-1
+
+[GDXDISP: Merged_set_1 Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: xket Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=2
+PlaneRownr=-1
+
+[GDXDISP: xket Par 5]
+PlaneDim=1
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=4,2,3,1,5
+Decim=0
+PlaneRownr=15
+PlaneFilter1=Auto
+
+[GDXDISP: nket Par 4]
+PlaneDim=1
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=3,2,1,4
+Decim=0
+PlaneRownr=2
+PlaneFilter1=ldv
+
+[GDXDISP: tran_vmtV Par 5]
+PlaneDim=1
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=3,2,4,1,5
+Decim=0
+PlaneRownr=13
+PlaneFilter1=RodF_GasV
+
+[GDXDISP: chk_gdp Par 4]
+PlaneDim=2
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=2,4,1,3
+Decim=2
+PlaneRownr=5
+PlaneFilter1=BRA
+PlaneFilter2=diff
+
+[GDXDISP: tran_mpgeV Par 5]
+PlaneDim=2
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=2,1,4,3,5
+Decim=1
+PlaneRownr=-1
+PlaneFilter1=USA
+PlaneFilter2=ffown_enoe10%_REF
+
+[GDXDISP: totcap Par 5]
+PlaneDim=1
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=4,2,3,1,5
+Decim=1
+PlaneRownr=53
+PlaneFilter1=Auto_FCEV
+
+[RP:A]
+1=
+
+[GDXDISP: afv_edt0 Par 5]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=3
+PlaneRownr=-1
+
+[GDXDISP: afv_ldt0 Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=3
+PlaneRownr=-1
+
+[GDXDISP: afv_kdt0 Par 5]
+PlaneDim=1
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=4,1,2,3,5
+Decim=5
+PlaneRownr=-1
+
+[GDXDISP: afv_idt0 Par 5]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=3
+PlaneRownr=-1
+
+[GDXDISP: afv_hkdt0 Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: afv_edtrdt0 Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=3
+PlaneRownr=-1
+
+[GDXDISP: vmt_growth Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=2,1,3
+Decim=2
+PlaneRownr=-1
+
+[GDXDISP: chk_pk Par 4]
+PlaneDim=1
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=3,2,1,4
+Decim=2
+PlaneRownr=2
+PlaneFilter1=ldv
+
+[GDXDISP: tran_mpge Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=1
+PlaneRownr=-1
+
+[GDXDISP: c2_ke0 Par 5]
+PlaneDim=1
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=3,2,1,4,5
+Decim=6
+PlaneRownr=2
+PlaneFilter1=ldv
+
+[GDXDISP: c_afvT0 Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=5
+PlaneRownr=-1
+
+[GDXDISP: c_cd0_auto Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=2,3,1,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: c_le0 Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=2,1,3
+Decim=2
+PlaneRownr=-1
+
+[GDXDISP: chk_pl Par 3]
+PlaneDim=1
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=2,1,3
+Decim=2
+PlaneRownr=-1
+
+[GDXDISP: cons_allp Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: cons_alls Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: cons_alls_tonn Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: cons_p Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: cons_tonn Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ele_btu Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ele_valu Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: emis_rep Par 6]
+PlaneDim=0
+RowDim=6
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: en_btu Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: en_valu Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: enprod_btu Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: enprod_valu Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: entrd_btu Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: entrd_gal Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: entrd_valu Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: gdp_sec Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ghgtot Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ghgtott Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: land_area Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: land_valu Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: OEV_btu Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: OEV_gal Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: OEV_pric Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: OEV_pric_pc Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: OEV_valu Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: output Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: price Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: prices Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: trade Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_emis Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_enbtu Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_mpgeAFV Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_prod_pmt Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: BAF_Eq_Terms Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: BAF_Parts Par 4]
+PlaneDim=1
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=3,1,4,2
+Decim=1
+PlaneRownr=-1
+
+[GDXDISP: BAF_Parts_US Par 3]
+PlaneDim=1
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,3,2
+Decim=0
+PlaneRownr=4
+PlaneFilter1=National_110AEOC
+
+[GDXDISP: Biomass_by_Feedstock Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: Biomass_Portfolio2 Par 4]
+PlaneDim=1
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=3,1,2,4
+Decim=0
+PlaneRownr=1
+PlaneFilter1=Cropresidues
+
+[GDXDISP: chg_PGE_reg Par 3]
+PlaneDim=1
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=1
+PlaneRownr=7
+PlaneFilter1=National_logres101C
+
+[GDXDISP: chg_feedstock2 Par 4]
+PlaneDim=1
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=0
+PlaneRownr=7
+PlaneFilter1=National_logres101C
+
+[GDXDISP: chg_feedstock2_us Par 3]
+PlaneDim=1
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=0
+PlaneRownr=7
+PlaneFilter1=National_logres101C
+
+[RP:MODEL_V13]
+1= r=.\lst\DA\a1  s=.\lst\DA\a2
+2=
+
+[GDXDISP: tran_vmt Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: output_growth Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[RP:MODEL_T10]
+1=
+
+[GDXDISP: tran_vmtbyage Par 6]
+PlaneDim=0
+RowDim=6
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tranO Set 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tranp Set 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: trd Set 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: trn Set 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_vmtshrV Par 6]
+PlaneDim=0
+RowDim=6
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_vmt0_10_ Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_vmt0_10 Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_vmt0 Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_valuv Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_valu Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_sumry2 Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_sumry Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_pvmtT0_10_ Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_pvmtT0_10 Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_pvmtT0 Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_prod Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_pricT0_10_ Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_pricT0_10 Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: tran_pricT0 Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[RP:LURA_REPORT]
+1=
+
+[RP:LURA_CONSTRAINTS]
+1=
+
+[RP:BAF_NEW]
+1=
+
+[RP:UNTITLED_4]
+1=
+
+[RP:MODEL_T12]
+1=r=.\lst\DA\a1  s=.\lst\DA\a2 
+2=
+
+[RP:RUN_CALIBRATION]
+1=
+
+[RP:MODEL_T13]
+1= r=.\lst\DA\a1  s=.\lst\DA\a2  
+2=
+
+[RP:RUN_CAL_T1]
+1=
+
+[RP:RUN1]
+1=
+
+[RP:US_AEO2019_DATA]
+1=
+
+[RP:READ_AUTO_AEO2015]
+1=pw=200
+2=
+
+[RP:RRUN]
+1=
+
+[RP:MERGE_FF_NOGASV]
+1=
+
+[RP:LOOP_IC3]
+1=
+
+[RP:TEQ]
+1=pw=500
+2=
+
+[RP:UNTITLED_10]
+1=
+
+[RP:LEARNING_CURVES_TEST]
+1=
+
+[RP:AFV_EPA_20181106]
+1=
+
+[RP:UNTITLED_6]
+1=r=.\lst\DA_12_e25%ff8%_eff\lop25   pw=500    
+2=r=.\lst\DA_12_e25%ff8%\lop50   pw=500    
+3=  r=.\merge\lst\DA_12_ffafvmerge\merge  pw=200  
+4=r=.\lst\da_11\ref50   pw=500    
+5= r=.\lst\task3_1\a1
+6=AutoTrgt_mpge
+7=
+
+[RP:MERGE_FF_EAFV]
+1=
+
+[RP:UNTITLED_9]
+1=
+
+[GDXDISP: AFV_kc_coef Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=2
+PlaneRownr=-1
+
+[GDXDISP: auto_noencost Par 4]
+PlaneDim=1
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=3,1,2,4
+Decim=3
+PlaneRownr=2
+PlaneFilter1=Kd0_infr
+
+[RP:UNTITLED_1]
+1=r=..\restart\loop_bau_2020  pw=500
+2=r=..\restart\core.g00  pw=500
+3=r=..\restart\loop_bau_2050  pw=500
+4=r=..\restart\loop_bau_2015   pw=500
+5=r=..\restart\loop_bau_2010   pw=500
+6=r=..\restart\loop_bau_20010   pw=500
+7=r=..\restart\loop_bau_2006   pw=500
+8=r=..\restart\loop_bau_2030   pw=500
+9=r=..\restart\loop_bau_2025   pw=500
+10=r=..\restart\loop_bau_2020   pw=500
+11=r=..\restart\loop_bau_2050   pw=500
+12=r=..\restart\loop_ctax40_2050   pw=500
+13=r=..\restart\loop_bau_2050
+14=500
+15=r=..\restart\loop_ctax40_2050
+16=r=..\restart\loop_bau_2030
+17=r=..\restart\loop_bau_2020
+18=r=..\restart\loop_bau_2015
+19=r=..\restart\loop_bau_2015
+20=r=..\restart\core.g00
+
+[RP:MODEL_IC]
+1=
+
+[RP:UNTITLED_8]
+1=r=.\lst\DA\ffic3\a1_ffown_IC5%   pw=500
+2=r=.\lst\DA\ffic3\a1   pw=500
+3=r=.\lst\DA_12_e25%ff8%_nolimit\hop50   pw=500
+4=r=.\lst\DA_12_e25%ff8%_nolimit\hop45   pw=500
+5=r=.\lst\DA_12_e25%ff8%_nolimit\hop40   pw=500
+6=r=.\lst\DA_12_e25%ff8%_nolimit\hop35   pw=500
+7=r=.\lst\DA_12_e25%ff4%_nolimit\lop50   pw=500
+8=r=.\lst\DA_12_e25%ff4%_nolimit\hop50   pw=500
+9=r=.\lst\DA_12_e25%ff4%_nolimit\ref50   pw=500
+10= r=.\merge\lst\DA_12_ffafv_nl\merge     --vsn=DA  --run=12   
+11= r=.\merge\lst\DA_12_ffafvmerge_nolimit\merge     --vsn=DA  --run=12   
+12= s=.\merge\lst\DA_12_ffafvmerge_nolimit\merge     --vsn=DA  --run=12   
+13=r=.\lst\DA_12_e25%ff8%_nolimit\hop50   pw=500     
+14=r=.\merge\lst\DA_12_ffafvmerge_nolimit\merge   --vsn=DA   --run=12 
+15=
+
+[RP:UNTITLED_7]
+1=r=.\lst\DA_12\a1 
+2==.\lst\DA_12\a1 
+3=
+
+[RP:READ_AUTO_AEO2019]
+1=
+
+[RP:UNTITLED_11]
+1=
+
+[RP:UNTITLED_12]
+1=
+
+[RP:READ_GCAM_TRAN_DBXML]
+1=
+
+[RP:READ_GCAM4.2_TRAN_DBXML]
+1=pw=200  s=.\output\a1
+2=pw=200
+3=
+
+[RP:RUN_EN@ENOE]
+1=
+
+[GDXDISP: modelstats Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: prices_kt_pc Par 6]
+PlaneDim=0
+RowDim=6
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[RP:MODEL_1]
+1=
+
+[RP:RUN_EN]
+1=
+
+[RP:LOOP_IC]
+1= --scn=lop --nt=8  --ic1=IC0%  r==.\lst\DA\ff_nogasv\lop40_ffown  s=.\lst\DA\ff_nogasv\lop45_ffown    
+2= --scn=lop --nt=8  --ic1=IC0%  r==.\lst\DA\ff_nogasv\lop40_ffown 
+3= --scn=lop --nt=8  --ic1=IC0%  r==.\lst\DA\ff_nogasv\lop40_ffown  s=.\lst\DA\ff_nogasv\lop45_ffown  
+4=--scn=lop --nt=5  --ic1=IC10%  r=.\lst\DA\ffic3\lop25_ffown_IC10%  s=.\lst\DA\ffic3\lop30_ffown_IC10%_1  
+5=--scn=lop --nt=5  --ic1=IC10%  r=.\lst\DA\ffic3\lop25_ffown_IC10%
+6=--scn=ref --nt=7  --ic1=IC0%    r=.\lst\DA\ffic2\ref35_ff0_IC0%      s=.\lst\DA\ffic2\ref40_ff0_IC0%  
+7=--scn=hop --nt=5  --ic1=IC5%  r=.\lst\DA\ffic2\hop25_ffown_IC5%  s=.\lst\DA\ffic2\hop30_ffown_IC5%_1    o=.\lst\DA\ffic2\hop30_ffown_IC5%_1.lst       
+8=--scn=hop --nt=5  --ic1=IC5%  r=.\lst\DA\ffic2\hop25_ffown_IC5% 
+9=--scn=ref --ic1=IC2p5% --nt=9   r=.\lst\DA\ffic\a2_ffaeo_ic2p5%
+10= --scn=ref --ic1=IC0% --nt=9     r=.\lst\DA\ffic\a2_ffaeo_ic0%  
+11=
+
+[RP:UNTITLED_13]
+1=
+
+[RP:UNTITLED_14]
+1=
+
+[RP:MERGE_TRNFF]
+1=
+
+[RP:UNTITLED_16]
+1=
+
+[RP:RUN_TRNFF]
+1=
+
+[RP:MODEL_TRNFF]
+1=
+
+[RP:MODEL_TRNFF1]
+1=
+
+[RP:MODEL_OEV]
+1=r=.\lst\DA\oev\a1    s=.\lst\DA\oev\a2    fw=1
+2=r=.\lst\DA\oev\a1    s=.\lst\DA\oev\a2 
+3=
+
+[RP:RUN_EAFV1]
+1=
+
+[RP:LOOP_IC2]
+1=--scn=ref --nt=2   --eafvA=0.2   --eafvH=0.2   --eldv=0  r=.\lst\DA\oev\ref10_ffown_eldv0  s=.\lst\DA\oev\ref15_ffown_eldv0      
+2=--scn=ref --nt=2   --eafvA=0.2   --eafvH=0.2   --eldv=0  r=.\lst\DA\oev\ref10_ffown_eldv0p1  s=.\lst\DA\oev\ref15_ffown_eldv0 
+3=--scn=ref --nt=1   --eafvA=0.2   --eafvH=0.2   --eldv=0  r=.\lst\DA\oev\a2                   s=.\lst\DA\oev\ref10_ffown_eldv0      
+4= --scn=ref --nt=1         r=.\lst\DA\oev\a2           s=.\lst\DA\oev\ref10_ffown  
+5=--scn=lop --nt=8       r=.\lst\DA\trnff\lop40_ffown  s=.\lst\DA\trnff\lop45_ffown
+6=--scn=ref --nt=7   --eva=0.1 --enoe=0.1  --leus=1.05    r=.\lst\DA\trnff\ref35_ffown_enoe10%_3  s=.\lst\DA\trnff\ref40_ffown_enoe10%_1 
+7=
+
+[RP:RUN_OEV]
+1=
+
+[RP:UNTITLED_17]
+1=r=.\lst\DA\eoev\hop15_ffown_eoev0p5   pw=500   
+2=r=.\lst\DA\eoev\hop50_ffown_eoev0p5   pw=500   
+3=r=.\lst\shock2\ref    pw=200
+4=r=.\lst\shock4_old\ref    pw=200
+5=f
+6=r=.\lst\shock2\r15   pw=200
+7=r=.\lst\shock\ref    pw=200
+8=r=.\lst\test\r15 pw=200
+9=r=.\lst\test\s15 pw=200
+10=r=.\lst\shock4_old\ref pw=200
+11=r=.\lst\test2\r15 pw=200
+12=r=.\lst\test3\r15 pw=200
+13=r=.\lst\test2\a1 pw=200
+14=r=.\lst\test\r20 pw=200
+15=r=.\lst\test1\a1  pw=200
+16=r=.\lst\test1\r20  pw=200
+17=r=.\lst\shock\ref  pw=200
+18=r=.\lst\test1  pw=200
+19=r=.\lst\shock4\ref  pw=200
+20=r=.\lst\shock4\a1  pw=200
+
+[RP:RUN_AGDNDA]
+1=
+
+[RP:MERGE_EOEV]
+1=
+
+[RP:MERGE_KSTP]
+1=
+
+[RP:MERGE_KFS]
+1=
+
+[FILE1]
+1=D:\Model\ADAGE\ADAGE_2020\ADAGE_task5_step17_AGDA_v3\report4scn.gms
+2=D:\Model\ADAGE\ADAGE_2019\ADAGE_task5_step15_fes_v15_ffic_v5\data\data7b_afv.dat
+3=D:\Model\ADAGE\ADAGE_2019\ADAGE_task5_step15_fes_v14_t7\model_t13.gms
+4=D:\Model\ADAGE\ADAGE_2019\ADAGE_task5_step15_fes_v14_t1\model.gms
+5=F:\Model\ADAGE\ADAGE_2019\ADAGE_task5_step15_Fes\output\compare_old.gdx
+
+[FILE2]
+1=D:\Model\ADAGE\ADAGE_2020\ADAGE_task5_step17_AGDA_v3\report4scn_diffA.gms
+2=D:\Model\ADAGE\ADAGE_2019\ADAGE_task5_step15_fes_v15_ffic_v5\data\data7b_afv_03122020.dat
+3=D:\Model\ADAGE\ADAGE_2019\ADAGE_task5_step15_fes_v14_t7\model_t13b.gms
+4=D:\Model\ADAGE\ADAGE_2019\ADAGE_task5_step15_fes_v13\model.gms
+5=F:\Model\ADAGE\ADAGE_2019\ADAGE_task5_step15_Fes\output\compare_new.gdx
+
+[RP:REPORT4SCN_DIFFA1]
+1=
+
+[RP:REPORT4SCN_DIFFA]
+1=
+
+[RP:REPORT4SCN_DIFFDN]
+1=
+
+[RP:REPORT4SCN_DIFFDA]
+1=
+
+[RP:MODEL_KLDV]
+1=
+
+[RP:REPORT4SCN_DIFFHOP]
+1=
+
+[RP:REPORT4SCN_DIFFLOP]
+1=
+
+[RP:REPORT4SCN_DIFFREF]
+1=
+
+[RP:MODEL_KLDVOEV]
+1=model_kldvoev.gms   r=.\lst\DA0\bda1  s=.\lst\DA0\bd\a2 
+2= r=.\lst\DN\a1  s=.\lst\DN\a2    
+
+[RP:MODEL_KLDVOEV_PCRU]
+1=r=.\lst\DA0\efcev_bd1_p\a1  s=.\lst\DA0\efcev_bd1_p\b2
+2=
+
+[RP:DATA_FABLE]
+1=
+
+[RP:UNTITLED_5]
+1=r=.\lst\gtap2018\bau
+2=
+
+[RP:UNTITLED_2]
+1=
+2=r=.\lst\DA\ref25 pw=500  
+3=r=.\lst\DA\ref20 pw=500  
+4=r=.\lst\DA\ref15 pw=500  
+5=r=.\lst\DA\ref10 pw=500  
+6=r=.\lst\DA\a1 pw=500  
+7=r=.\t\a3_aeo_ref_high pw=200
+8=r=.\t\a3_National_105AEOC
+9=r=.\t\a3_aeo_ref_high
+10=r=.\t\a2
+
+[RP:RUN_STEP5]
+1=
+
+[RP:RUN_STEP6]
+1=
+
+[RP:RUN_STEP5~7]
+1=
+
+[RP:MERGE_EF]
+1=
+
+[RP:MODEL_KLDVOEV_CD0]
+1=
+
+[RP:UNTITLED_3]
+1= r=.\merge\lst\DA_15_ff8%_t22\merge   --vsn=DA   --run=15  --scn=ff8%_t22 
+2=r=.\lst\Bau_compare\merge pw=500
+3=r=.\lst\t6\a1   pw=200
+4=r=.\lst\a1
+5=r=.\lst\t3\a2 pw=500
+6=r=.\lst\ap\a4 pw=500
+7=r=.\lst\ap\a2 pw=500
+8=r=.\lst\ap\$50at5 pw=500
+9=r=.\lst\ap\bau20   pw=500
+10=r=.\lst\ap\bau pw=500
+11=r=.\lst\ap\$10at5 pw=500
+12=
+
+[RP:UNTITLED_19]
+1=   r=.\lst\all\merge  pw=500  --vsn=all    pw=500 
+2=   r=.\lst\all\merge  pw=500
+3=   r=.\lst\all\merge  
+4= r=.\lst\AN\a1  pw=500
+5=
+
+[RP:FINDINGS_PAFV]
+1=
+
+[GDXDISP: prices_fuel_pc Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: prices_fuel Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: OEV_shr_btu Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: cons_all_tonn Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: cons_all Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: co2tott_ff Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: co2tot_ff Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: co2elet Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_shr Par 6]
+PlaneDim=0
+RowDim=6
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_macro Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_afvtV Par 6]
+PlaneDim=0
+RowDim=6
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_afvtQ Par 6]
+PlaneDim=0
+RowDim=6
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_afvtP Par 6]
+PlaneDim=0
+RowDim=6
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: chk_afvtall Par 7]
+PlaneDim=0
+RowDim=7
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6,7
+Decim=7
+PlaneRownr=-1
+
+[RP:MERGE_CD0]
+1=
+
+[RP:MERGE_PG]
+1=
+
+[RP:LOOP_GDP]
+1=--scn=ref --nt=2    r=.\lst\DA\step3\ref10  
+2=-scn=ref --nt=2    r=.\lst\DA\step3\ref10  
+3=  --scn=ref --nt=1  r=.\lst\DA\step3\a2 
+4=
+
+[RP:LOOP_STEP8]
+1=
+
+[RP:LOOP_STEP7]
+1=
+
+[RP:LOOP_STEP2]
+1=
+
+[RP:DATA_TAX]
+1=  s=.\lst\DA\step7\a1   pw=500
+2=pw=500
+3=  s=.\lst\DA0\bd\a1   
+4= data_tax.gms    s=.\lst\DA0\bd\a1   
+5=  s=.\lst\DA\a1  
+6=  s=.\lst\AN\a1  
+7=  s=.\lst\DN\a1  
+8=
+
+[RP:RUN_AGDNDA1]
+1=
+
+[RP:MERGE2XLS_PCRU_CHG]
+1=
+
+[RP:PCTREPORT]
+1=
+
+[RP:REPORT]
+1=
+
+[RP:REPORT4SCN]
+1= --shockscn=REF --scn=ref  gdx=.\output\pcru\ref 
+2=
+
+[RP:20_RODBT]
+1=
+
+[GDXDISP: ATB20_WndSolCost Par 6]
+PlaneDim=1
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=6,1,2,3,4,5
+Decim=1
+PlaneRownr=1
+PlaneFilter1=LCOE
+
+[RP:GHG_EMISSIONS-INTERNATIONAL_2010]
+1=
+
+[RP:AGGR_LULC_8R]
+1=
+
+[RP:RUN]
+1=
+
+[RP:ANALYSIS_OILPRICE]
+1=
+
+[RP:LOOP]
+1=  --scn=ref --nt=9  r=.\lst\DA\Doc\a2   s=.\lst\DA\Doc\ref50   gdx=.\output\DA\DA_Doc_REF
+2= --scn=ref --nt=1  r=.\lst\DA\step8\a2 
+3=--scn=ref --nt=8  --cus=0.98  r=.\lst\DA\step7\ref40 
+4=--scn=ref --nt=1    r=.\lst\DA\step7\a2       s=.\lst\DA\step7\ref10     
+5=--scn=ref --nt=5 --cus=1.05 --leus=0.92  r=.\lst\DA\step6\ref25
+6= --scn=ref --nt=3  --vus=0.80 --lus=1.3 --cus=1.18   r=.\lst\DA\step6\ref15    s=.\lst\DA\step6\ref20_a6   
+7=--scn=ref --nt=3  --vus=0.80 --lus=1.3   r=.\lst\DA\step6\ref15  
+8= --scn=hop --nt=4    r=.\lst\DA\step5\hop20    s=.\lst\DA\step5\hop25 
+9=--scn=ref --nt=3 --vus=0.75 --lus=0.90  --lebr=0.61  --cxa=1.00 --lexa=0.98  --leaf=0.98 --caf=0.88  --lerw=0.64   r=.\lst\DA\step5\ref15    s=.\lst\DA\step5\ref20_8  
+10=--scn=ref --nt=3 --vus=0.75 --lus0.90  --lebr=0.61  --cxa=1.00 --lexa=0.98  --leaf=0.98 --caf=0.88  --lerw=0.64   r=.\lst\DA\step5\ref15    s=.\lst\DA\step5\ref20_8  
+11=--scn=ref --nt=3 --vus=0.80 --lus=1.0  --lebr=0.61  --cxa=1.00 --lexa=1.00  --leaf=0.98 --caf=0.88  --lerw=0.64   r=.\lst\DA\step5\ref15  
+12=--scn=ref --nt=3 --vus=0.80 --lus=1.0  --lebr=0.61  --cxa=1.00 --lexa=1.00  --leaf=0.98 --caf=0.88  --lerw=0.64  
+13=--scn=ref --nt=3 --vus=0.85  --lebr=0.62  --cxa=1.10 --lexa=1.08  --leaf=1.00   --lerw=0.65   r=.\lst\DA\step5\ref15   
+14=--scn=ref --nt=2 --vus=6.0  --vbr=3.0  --cbr=1.36 --lbr=5.0  --vrw=4.5 --crw=1.10 --lus=5.0--lexa=0.91 --cxa=1.02  r=.\lst\DA\step5\ref10    s=.\lst\DA\step5\ref15_16                     
+15=--scn=ref --nt=2 --vus=6.0  --vbr=3.0  --cbr=1.38  --vrw=4.5 --crw=1.10 --lus=5.0  --lbr=5.5 --lexa=0.91 --cxa=1.02  r=.\lst\DA\step5\ref10    s=.\lst\DA\step5\ref15 
+16= --scn=ref --nt=1  r=.\lst\DA\step1\a2 
+17= --scn=lop --nt=1 r=.\lst\DA0\efcev_bd1_p\b2   s=.\lst\DA0\efcev_bd1_p\lop10_b  
+18=r=.\lst\DA0\efcev_bd1_p\b2   s=.\lst\DA0\efcev_bd1_p\lop25_b  
+19=    --scn=ref --nt=1  r=.\lst\DA\kldv_fc\b2   s=.\lst\DA\kldv_fc\ref10
+20=    --scn=ref --nt=9  r=.\lst\DA\kldv_fc\a2   s=.\lst\DA\kldv_fc\ref50 
+
+[RP:READ_CO2_WORLD_TRAN]
+1=
+
+[RP:READ_GHG_WORLD]
+1=
+
+[RP:FINDINGS]
+1=
+
+[RP:MODEL]
+1= r=.\lst\DA\Doc\a1 s=.\lst\DA\Doc\a2
+2=  r=.\lst\DA\a1 s=.\lst\DA\a2 
+3= r=.\lst\DN\a1  s=.\lst\DN\a2 
+4= r=.\lst\AN\a1  s=.\lst\AN\a2 
+5= r=.\lst\DA\a1  s=.\lst\DA\a2
+6= r=.\lst\DA\a1  
+7= r=.\lst\DA\a1  s=.\lst\DA\a2  
+8=r=.\lst\DA\t1   s=.\lst\DA\t2  
+9=r=.\lst\DA\a1   s=.\lst\DA\a2  
+10=  --a=1   r=.\lst\DA\a1   s=.\lst\DA\a2  
+11= r=.\lst\DA\a1   s=.\lst\DA\a2  
+12=r=.\lst\bioAFV\a1   s=.\lst\bioAFV\a2 
+13=r=.\lst\bioAFV\a1   s=.\lst\bioAFV\a2_afv  
+14=r=.\lst\bioAFV\a1   s=.\lst\bioAFV\a2  
+15= r=.\lst\bioHEV\a1   s=.\lst\bioHEV\a2   pw=500  
+16=  r=.\lst\task2_11\a1   s=.\lst\task2_11\a2 
+17=r=.\lst\task4_7\a1   s=.\lst\task4_7\a2 
+18= s=.\lst\task4_7\a1   
+19= r=.\lst\task3_6\a1   s=.\lst\task3_6\a2  
+20= r=.\lst\task3_3\a1   s=.\lst\task3_3\a2
+
+[RP:MERGE]
+1= s=.\lst\all\merge  --vsn=all    pw=500    
+2= s=.\lst\DA\merge  --vsn=all    pw=500  
+3= s=.\lst\all\merge  --vsn=all    pw=500  
+4= s=.\lst\DA\merge  --vsn=DA    pw=500
+5= s=.\lst\all\merge   --vsn=all    pw=500      
+6= s=.\lst\all\merge   --   pw=500     
+7= s=.\lst\all\merge      pw=500     
+8=  s=.\lst\DA0\all\merge_ef      pw=500  
+9=  s=.\lst\all\merge      pw=500  
+10=  s=.\lst\DA\all\merge      pw=500  
+11=   s=.\lst\all\merge      pw=500 
+12=   s=.\lst\merge      pw=500 
+13= s=.\lst\DA\trnff\merge    --vsn=DA   pw=500    
+14= s=.\lst\DA\en\merge     --vsn=DA   pw=500 
+15= s=.\lst\DA\ff_eafv\merge     --vsn=DA   pw=500 
+16= s=.\lst\DA\ff_nogasv\merge     --vsn=DA   pw=500 
+17= s=.\lst\DA\ffic2\merge     --vsn=DA   pw=500 
+18= s=.\lst\DA\ff\merge     --vsn=DA   pw=500 
+19= s=.\lst\DA\merge     --vsn=DA   pw=500 
+20= s=.\lst\DA     --vsn=DA   pw=500 
+
+[RP:MATCH]
+1=
+2=r=.\lst\task4_7\a2 pw=200
+3=r=.\lst\task3_5\a2 pw=200
+4=r=.\lst\7gdp\a2  pw=200
+5=r=.\lst\4gdp\a2  pw=200
+6=r=.\lst\ap\a1  pw=200
+
+[RP:POSTCHK]
+1=r=.\lst\DA\doc\a2         pw=500    
+2=r=.\lst\DA\step2\new\ref50  pw=500    
+3=r=.\lst\DN\step2\ref50  pw=500   
+4=r=.\lst\DN\step2\hop50  pw=500   
+5=r=.\lst\DN\step2\lop50  pw=500   
+6=r=.\lst\DA\step2\new\lop50  pw=500    gdx=.\output\DA\step2\new\DA_step2_LOP.gdx    
+7=r=.\lst\DA\step2\new\hop50  pw=500    gdx=.\output\DA\step2\new\DA_step2_HOP.gdx    
+8=r=.\lst\DA\step2\new\ref50  pw=500    gdx=.\output\DA\step2\new\DA_step2_REF.gdx    
+9=r=.\lst\DA\step2\lop50  pw=500    gdx=.\output\DA\step2\new\DA_step2_LOP.gdx    
+10=r=.\lst\DA\step2\hop50  pw=500    gdx=.\output\DA\step2\new\DA_step2_HOP.gdx    
+11=r=.\lst\DA\step2\hop50  pw=500    
+12=r=.\lst\DA\step2\ref50  pw=500    
+13=r=.\lst\DA\step7\hop50  pw=500    
+14=r=.\lst\DA\step7\ref50  pw=500    
+15=r=.\lst\DA\step7\lop50  pw=500    
+16=r=.\lst\DA\step9\lop50  pw=500    
+17=r=.\lst\DA\step9\hop50  pw=500    
+18=r=.\lst\DA\step9\ref50  pw=500    
+19=r=.\lst\DA\step8\hop50  pw=500    
+20=r=.\lst\DA\step8\ref50  pw=500    
+
+[RP:RUN_LOG]
+1=
+
+[RP:SET]
+1=
+
+[RP:UPDATE_ENTREND]
+1=
+
+[RP:UPDATE_EXTREND]
+1=
+
+[RP:MERGE2XLS_PCRU]
+1= r=.\lst\all\merge  --vsn=all    pw=500  
+2= r=.\lst\DA\merge  --vsn=DA    pw=500
+3= r=.\lst\DA\merge  --vsn=all  --run=DA    pw=500
+4= r=.\lst\all\merge  --vsn=all    pw=500
+5= r=.\lst\DA\merge  --vsn=DA  --run=all    pw=500    
+6=r=.\lst\all\merge  --vsn=all    pw=500  
+7= r=.\lst\DA0\all\merge_ef  --vsn=DA0   --run=all pw=500 
+8= r=.\lst\DA0\all\merge_ef  --vsn=DA   --run=all pw=500 
+9=  r=.\lst\all\merge  --vsn=all   pw=500 
+10=  r=.\lst\DA\all\merge  --vsn=all   pw=500 
+11=  r=.\lst\DA\all\merge  --vsn=DA --run=all   pw=500 
+12=  r=.\lst\all\merge    --vsn=DA pw=500   
+13=  r=.\lst\all\merge    --vsn=all  pw=500   
+14=  r=.\lst\allmerge    --vsn=all  pw=500   
+15=  r=.\lst\allmerge      pw=500   
+16=  r=.\lst\merge      pw=500   
+17=r=.\lst\DA\ff_eafv\merge    --vsn=DA   --run=ff_eafv
+18=r=.\lst\DA\ff_nogasv\merge    --vsn=DA   --run=ff_nogasv
+19=r=.\lst\DA\ff_noagsv\merge   --vsn=DA   --run=ff_nogasv
+20=r=.\lst\DA\ffic2\merge   --vsn=DA   --run=ffic2 
+
+[RP:MERGE_ANDA]
+1=
+
+[RP:CHECK]
+1=
+
+[RP:DATA]
+1= s=.\lst\DA\Doc\a1    pw=500
+2= s=.\lst\DA\Doc\a1    
+3=  s=.\lst\TSG\a1       
+4=--tpref=0       s=.\lst\test4\a1  
+5=--tpref=0  s=.\lst\test1\a1 
+6= s=.\lst\test1\a1
+7= s=.\lst\EMF37\a1 
+8=s=.\lst\EMF37_3\a1   
+9=s=.\lst\EMF37_2\a1   
+10=s=.\lst\EMF37_1\a1   
+11=s=.\lst\emf37_3\a1  
+12= s=.\lst\EMF37_2\a1     
+13= s=.\lst\EMF37_1\a1     
+14=  s=.\lst\a1    pw=500
+15=  s=.\lst\a1  
+16=  s=.\lst\EMF37_rnw3\a1  
+17= s=.\lst\EMF37_3\a1  pw=500
+18= s=.\lst\EMF37_2\a1  
+19= s=.\lst\GTAP2021\a1  
+20= s=.\lst\EMF37\a1   
+
+[MRUFILES]
+1=D:\Model\ADAGE\ADAGE2Github\ADAGE\data\data6_tran.gdx
+2=D:\Model\ADAGE\ADAGE2Github\ADAGE\data\data7b_afv_EPA_20200312.gdx
+3=D:\Model\ADAGE\CGE_Data_2011_tran\GHG_Emissions\Emission_2013_YC\read_GHG_World.gms
+4=D:\Model\ADAGE\CGE_Data_2011_tran\GHG_Emissions\Emission_2013_YC\read_CO2_world_tran.gms
+5=D:\Model\ADAGE\ADAGE_2021to2022\ADAGE_step23_BE_sybd&nc1_BE19_land\data.gms
+6=D:\Model\ADAGE\CGE_Data_2011_tran\International\Aglandbio_Data\aggr_lulc_8r.gms
+7=D:\Model\ADAGE\CGE_Data_2011_tran\GHG_Emissions\GHG_emissions-international_2010.gms
+8=D:\Model\ADAGE\CGE_Data_2011_tran\GHG_Emissions\Output\GTAP_GHG_emissions-international.dat
+9=D:\Model\ADAGE\ADAGE2Github\ADAGE\model.lst
+
+[OPENWINDOW_1]
+FILE0=D:\Model\ADAGE\ADAGE_2020\ADAGE_Task5_step23_baselinbeforDoc\data\data12_match.gdx
+FILE1=D:\Model\ADAGE\ADAGE2Github\ADAGE\analysis\pcru\analysis_oilprice.gms
+FILE2=D:\Model\ADAGE\ADAGE2Github\ADAGE\check.gms
+FILE3=D:\Model\ADAGE\ADAGE2Github\ADAGE\data.gms
+FILE4=D:\Model\ADAGE\ADAGE2Github\ADAGE\data.lst
+FILE5=D:\Model\ADAGE\ADAGE2Github\ADAGE\data\Data_ATB2020.gdx
+FILE6=D:\Model\ADAGE\ADAGE2Github\ADAGE\data\data4_ghg.gdx
+FILE7=D:\Model\ADAGE\ADAGE2Github\ADAGE\findings.gms
+FILE8=D:\Model\ADAGE\ADAGE2Github\ADAGE\loop.gms
+FILE9=D:\Model\ADAGE\ADAGE2Github\ADAGE\loop.lst
+FILE10=D:\Model\ADAGE\ADAGE2Github\ADAGE\match.gms
+FILE11=D:\Model\ADAGE\ADAGE2Github\ADAGE\merge.gms
+FILE12=D:\Model\ADAGE\ADAGE2Github\ADAGE\merge_ANDA.gms
+FILE13=D:\Model\ADAGE\ADAGE2Github\ADAGE\merge2xls_pcru.gms
+FILE14=D:\Model\ADAGE\ADAGE2Github\ADAGE\model.gms
+FILE15=D:\Model\ADAGE\ADAGE2Github\ADAGE\postchk.gms
+FILE16=D:\Model\ADAGE\ADAGE2Github\ADAGE\postchk.lst
+FILE17=D:\Model\ADAGE\ADAGE2Github\ADAGE\run_log.gms
+FILE18=D:\Model\ADAGE\ADAGE2Github\ADAGE\set.gms
+FILE19=D:\Model\ADAGE\ADAGE2Github\ADAGE\update_entrend.gms
+FILE20=D:\Model\ADAGE\ADAGE2Github\ADAGE\update_extrend.gms
+FILE21=D:\Model\ADAGE\ADAGE2Github\ADAGE\check.gms
+MAXIM=1
+TOP=22
+LEFT=-16
+HEIGHT=481
+WIDTH=1399
